@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$('#formulario_proximo').on('submit',function(e){
 		e.preventDefault();
 		var details = $('#formulario_proximo').serialize();
@@ -7,7 +6,6 @@ $(document).ready(function(){
 			$('#response').html(data);
 		});
 	});
-
 	$('#formulario_reciente').on('submit',function(e){
 		e.preventDefault();
 		var details = $('#formulario_reciente').serialize();
@@ -15,7 +13,6 @@ $(document).ready(function(){
 			$('#response').html(data);
 		});
 	});
-
 	$('.prox').load('php/consulta_proxima.php');
 	$('.recientes').load('php/consulta_reciente.php');
 	
