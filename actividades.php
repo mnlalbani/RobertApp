@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,7 @@
 	<!-- ////////////////////////// DESCRIPCION ACTIIVIDAD /////////////////////////// -->
 
 	<section id="caratula">
-	
+	  <?php include_once("php/mostrar_noticia.php"); ?>
 	</section>
   
   <!-- /////////////////// GALERIA /////////////////// -->

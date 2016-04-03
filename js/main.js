@@ -18,15 +18,12 @@ $(document).ready(function(){
 
 	$('.prox').load('php/consulta_proxima.php');
 	$('.recientes').load('php/consulta_reciente.php');
-	//$('#caratula').load('php/mostrar_noticia');
-
 	
 });
 
 $(document).ajaxComplete(function(){
 	$('.boton-news').click(function(){
 		var codigo = $(this).attr('value');
-		$.get('php/mostrar_noticia.php',{codigo:codigo});
-		console.log(codigo);
+		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo;
 	});
-})
+});

@@ -1,3 +1,5 @@
+<?php include_once('php/connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -289,6 +291,8 @@
 				<hr>
 				<div class="text-footer">
 					<h2>Todos los derechos reservados. Rotary Cumaná</h2>
+					<a href="actividades.php?cod=24">actividad</a>
+					
 				</div>
 			</div>
 		</div>
