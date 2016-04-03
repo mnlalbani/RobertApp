@@ -84,7 +84,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">                
                   <li class="active">
-                        <a class="" href="iadmin.php">
+                        <a class="" href="admin.php">
                             <i class="icon_house_alt"></i>
                             <span>INICIO</span>
                         </a>
