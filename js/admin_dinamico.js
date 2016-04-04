@@ -4,7 +4,7 @@ $(document).ready(function(){
 		return false;
 	});
 	$('#proxima').click(function(){
-		$('#main-content').load('php/recursos_admin.php #vista_portada_noticias');
+		$('#main-content').load('php/recursos_admin.php #vista_portada_noticias_proxima');
 		return false;
 	});
 	$('#usuario').click(function(){
@@ -14,12 +14,20 @@ $(document).ready(function(){
 });
 
 $(document).ajaxComplete(function(){
-	$('#subir_noticia').click(function(){
-		$('#main-content').load('php/recursos_admin.php #vista_subir_noticias');
+	$('#subir_noticia_reciente').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_subir_noticias_recientes');
 		return false;
 	});
-	$('#editar_noticia').click(function(){
-		$('#main-content').load('php/recursos_admin.php #vista_listar_noticias');
+	$('#subir_noticia_proxima').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_subir_noticias_proximas');
+		return false;
+	});
+	$('#editar_noticia_reciente').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_listar_noticias_reciente');
+		return false;
+	});
+	$('#editar_noticia_proxima').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_listar_noticias_proximas');
 		return false;
 	});
 });

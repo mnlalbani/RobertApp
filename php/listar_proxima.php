@@ -1,14 +1,12 @@
-<?php
+<?php 
 	include("connection.php");
-	$sql = "SELECT * FROM usuario ORDER BY codigo DESC LIMIT 8";
+	$sql = "SELECT * FROM proxima ORDER BY codigo DESC LIMIT 8";
 	$result = $mysqli->query($sql);
 	while($row = mysqli_fetch_array($result)) {
 		echo "<tr>";
-		echo 	"<td>". $row['nombre']." ".$row['apellido']."</td>";
-		echo 	"<td>". date('d-m-Y', strtotime($row['fechaRegistro'])). "</td>";
-		echo 	"<td>". $row['correo']. "</td>";
-		echo 	"<td>". $row['ciudad']. "</td>";
-		echo 	"<td>"."0".$row['telefono']. "</td>";
+		echo 	"<td>". $row['titulo']. "</td>";
+		echo 	"<td>". $row['fecha']."</td>";
+		echo 	"<td>". $row['lugar']."</td>";
 		echo 	"<td>";
 		echo 		"<div class='btn-group'>";
 		echo  			"<a class='btn btn-primary' href=''><i class='icon_plus_alt2'></i></a>";

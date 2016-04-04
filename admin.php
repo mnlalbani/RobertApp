@@ -137,6 +137,7 @@
     </section>
     <!-- container section start -->
     <!-- javascripts -->
+    <script type="text/javascript" src="js/main.js"></script>
     <script src="js/jsadmin/jquery.js"></script>
     <script src="js/jsadmin/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jsadmin/jquery-1.8.3.min.js"></script>
