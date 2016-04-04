@@ -310,3 +310,66 @@
                 </div>
             </div>
           </section>
+<!--//////////////////////////////Vista Subir Usuarios//////////////////////////////-->
+            <section class="wrapper" id="vista_subir_noticias_recientes">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa-file-text-o"></i> NOTICIAS RECIENTES</h3>
+                      <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                        <li><i class="icon_document_alt"></i>Noticias</li>
+                        <li><i class="fa fa-file-text-o"></i>Noticias recientes</li>
+                      </ol>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <section class="panel">
+                      <header class="panel-heading">
+                        Form Elements
+                      </header>
+                    <div class="panel-body">
+                      <form class="form-horizontal " method="post" id="formulario_reciente" action="php/registro_reciente.php">
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Titulo:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Titulo de la noticia.." id="titulo" name="titulo">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Fecha:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Fecha de la noticia.." id="fecha" name="fecha">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Lugar:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Lugar de la noticia.." id="lugar" name="lugar">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Contenido:</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia">
+                              
+                            </textarea>
+                          </div>
+                        </div>
+                    <!--
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="exampleInputFile">Imagenes:</label>
+                          <input type="file" id="exampleInputFile">
+                          <p class="col-sm-2 control-label">Ejemplo: imagen.jpg</p>
+                        </div>
+                     -->
+                        <button  name="submit" class="boton-login btn-block" type="submit">
+                          PUBLICAR NOTICIA
+                        </button>
+                      </form>
+                      <div id="response"></div>
+                    </div>
+                    </section>
+                  </div>
+                </div>
+            </section>
