@@ -181,39 +181,6 @@
 	<section id="news">
 		<div class="row">
 			<div class="recientes">
-				<!--<div class="text1">
-					<h1>25 enero del 2015</h1>
-					<h2>Presentacion de la obra de Teatro "Sangre en el Divan" </h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi reprehenderit sapiente repellat fugit cum, dignissimos non culpa, hic sed ullam. </p>
-					<button href="actividades.html" type="button" class="boton-news">VER MAS</button>
-				</div>
-				
-				<div class="img1">
-					<img src="img/news1.jpg" alt="">
-				</div>
-				
-				<div class="img2">	
-					<img src="img/news2.jpg" alt="">
-				</div>
-				
-				<div class="text2">
-					<h1>25 enero del 2015</h1>
-					<h2>Sesión Especial de los 111 Años de Fundado Rotary International</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi reprehenderit sapiente repellat fugit cum, dignissimos non culpa, hic sed ullam. </p>
-					<button type="button" class="boton-news">VER MAS</button>
-				</div>
-
-				<div class="text1">
-					<h1>25 enero del 2015</h1>
-					<h2>Seminario de "INTERPRETACIÓN HIERÁTICA DEL GÉNESIS"</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi reprehenderit sapiente repellat fugit cum, dignissimos non culpa, hic sed ullam. </p>
-					<button type="button" class="boton-news">VER MAS</button> 
-				</div>
-
-				<div class="img1">
-					<img src="img/news3.jpg" alt="">
-				</div>
-				-->
 			</div>
 		
 			<div class="titulo-prox">

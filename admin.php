@@ -137,11 +137,11 @@
     </section>
     <!-- container section start -->
     <!-- javascripts -->
-    <script type="text/javascript" src="js/main.js"></script>
     <script src="js/jsadmin/jquery.js"></script>
     <script src="js/jsadmin/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jsadmin/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jsadmin/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/admin_dinamico.js"></script>
     <!-- bootstrap -->
     <script src="js/jsadmin/bootstrap.min.js"></script>
@@ -153,7 +153,7 @@
   	<script src="js/jsadmin/jquery.slimscroll.min.js"></script>
     <script>
           //knob
-          $(function() {
+         /* $(function() {
             $(".knob").knob({
               'draw' : function () { 
                 $(this.i).val(this.cv + '%')
@@ -173,7 +173,7 @@
           $(function(){
             $('select.styled').customSelect();
           });
-          /* ---------- Map ---------- */
+          // ---------- Map ---------- //
           $(function(){
             $('#map').vectorMap({
               map: 'world_mill_en',
@@ -190,6 +190,7 @@
               }
             });
           });
+          */
     </script>
   </body>
 </html>

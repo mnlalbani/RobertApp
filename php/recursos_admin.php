@@ -51,9 +51,11 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="" ss="col-sm-2 control-label">Contenido:</label>
+                          <label class="col-sm-2 control-label">Contenido:</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia"></textarea>
+                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia">
+                              
+                            </textarea>
                           </div>
                         </div>
                     <!--
@@ -223,7 +225,9 @@
                                    <th><i class="icon_pin_alt"></i> Lugar</th>
                                    <th><i class="icon_cogs"></i> Action</th>
                                 </tr>
-                                <?php include_once("listar_reciente.php"); ?>
+                                <?php include_once("listar_reciente.php");
+                                      //include_once("eliminar_reciente.php");
+                                 ?>
                              </tbody>
                             </table>
                           </section>
