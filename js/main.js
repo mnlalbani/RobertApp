@@ -24,6 +24,7 @@ $(document).ajaxComplete(function(){
           	$('#response').html(data);
         });
 	});
+	$("a").unbind('click');
 	$('.eliminar').click(function(e){
 		e.preventDefault();
 		var tr = $(this).closest("tr");
