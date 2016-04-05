@@ -26,14 +26,16 @@ $(document).ajaxComplete(function(){
 	});
 	$('.eliminar').click(function(e){
 		e.preventDefault();
-		var titulo = $(this).attr('value');
-		    //if (confirm("¿Está seguro que desea eliminar la noticia "+titulo+"?") == true) {
-		        $.post('php/eliminar_reciente.php',titulo,function(data){
-		        //	$('#response').html(data);
-		        	console.log(titulo);
+		var tr = $(this).closest("tr");
+		var codigo = "codigo="+$(this).attr('value');
+		    if (confirm("¿Está seguro que desea eliminar la noticia "+codigo+"?") == true) {
+		        $.post('php/eliminar_reciente.php',codigo,function(data){
+		        	tr.remove();
+		   			$('#response').html(data);
+		        	console.log(codigo, tr);
 		        });
-		    //} else {
-		     //   console.log('no eliminado');
-		    //}
+		    } else {
+		     	return false;
+		    }
 	});
 });

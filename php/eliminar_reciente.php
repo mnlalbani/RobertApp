@@ -1,8 +1,11 @@
 <?php 
 include("connection.php");
-	$titulo = $_POST['titulo'];
+	$codigo = $_POST['codigo'];
 	var_dump($_SERVER);
-	$sql = "DELETE * FROM reciente WHERE titulo = '$titulo'";
+	var_dump($_GET);
+	var_dump($_POST);
+	$sql = "DELETE FROM `reciente` WHERE `codigo` = $codigo";
+	echo $sql;
 	$result = $mysqli->query($sql);
 	$mysqli->close();
 	echo "<p>Noticia eliminada</p>";
