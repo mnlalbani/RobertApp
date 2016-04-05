@@ -24,16 +24,17 @@ $(document).ajaxComplete(function(){
           	$('#response').html(data);
         });
 	});
-	$("a").unbind('click');
+	$(".eliminar").unbind('click'); //remueve el evento click de los enlaces con clase ".eliminar", evita la doble llamada del evento
 	$('.eliminar').click(function(e){
 		e.preventDefault();
 		var tr = $(this).closest("tr");
 		var codigo = "codigo="+$(this).attr('value');
-		    if (confirm("¿Está seguro que desea eliminar la noticia "+codigo+"?") == true) {
+		var titulo = $(this).attr('titulo');
+		    if (confirm("¿Está seguro que desea eliminar la noticia "+titulo+"?") == true) {
 		        $.post('php/eliminar_reciente.php',codigo,function(data){
 		        	tr.remove();
 		   			$('#response').html(data);
-		        	console.log(codigo, tr);
+		        	console.log(titulo, codigo, tr);
 		        });
 		    } else {
 		     	return false;
