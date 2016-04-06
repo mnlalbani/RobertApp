@@ -29,10 +29,11 @@ $(document).ajaxComplete(function(){
 	$('.eliminar').click(function(e){
 		e.preventDefault();
 		var tr = $(this).closest("tr"); 
-		var codigo = "codigo="+$(this).attr('value');
+		var codigo = $(this).attr('value');
 		var titulo = $(this).attr('titulo');
+		var tipo = $(this).attr('tipo');
 		    if (confirm("¿Está seguro que desea eliminar la noticia "+titulo+"?") == true) {
-		        $.post('php/eliminar_reciente.php',codigo,function(data){
+		        $.post('php/eliminar_noticia.php',{codigo:codigo,tipo:tipo},function(data){
 		        tr.hide("slow", function(){ 
 		        	 	$(this).remove();
 		        	 	 });
