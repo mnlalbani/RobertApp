@@ -114,7 +114,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="" ss="col-sm-2 control-label">Contenido:</label>
+                          <label class="col-sm-2 control-label">Contenido:</label>
                           <div class="col-sm-10">
                             <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia"></textarea>
                           </div>
@@ -202,10 +202,10 @@
           <section class="wrapper" id="vista_listar_noticias_reciente">
             <div class="row">
               <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Usuarios</h3>
+                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Noticias Recientes</h3>
                 <ol class="breadcrumb">
                   <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
-                  <li><i class="icon_document_alt"></i>Ver o Editar Usuarios</li>
+                  <li><i class="icon_document_alt"></i>Ver o Editar Noticias</li>
                 </ol>
               </div>
             </div>
@@ -225,9 +225,7 @@
                                    <th><i class="icon_pin_alt"></i> Lugar</th>
                                    <th><i class="icon_cogs"></i> Action</th>
                                 </tr>
-                                <?php include_once("listar_reciente.php");
-                                      //include_once("eliminar_reciente.php");
-                                 ?>
+                                <?php include_once("listar_reciente.php"); ?>
                              </tbody>
                             </table>
                           </section>
@@ -311,7 +309,7 @@
             </div>
           </section>
 <!--//////////////////////////////Vista Subir Usuarios//////////////////////////////-->
-            <section class="wrapper" id="vista_subir_noticias_recientes">
+            <section class="wrapper" id="vista_subir_usuarios">
                 <div class="row">
                   <div class="col-lg-12">
                     <h3 class="page-header"><i class="fa fa-file-text-o"></i> NOTICIAS RECIENTES</h3>

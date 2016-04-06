@@ -1,8 +1,10 @@
 <?php 
-
 	include_once("connection.php");
 	$errors = array();
 	$data = array();
+	var_dump($_SERVER);
+	var_dump($_POST);
+	var_dump($_GET);
 	if (empty($_POST['titulo'])) {
 		$errors['titulo'] = "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #ff2d55;;' class='alert alert-danger'> <i class='fa fa-times'></i> INGRESE EL TITULO DE LA NOTICIA</p>";
 	}
@@ -25,9 +27,10 @@
 		$data['success'] = true;
 		$data['message'] = 'success!';
 
-		$sql = "INSERT INTO reciente (titulo, fecha,contenido)
+		$sql = "INSERT INTO reciente (titulo, fecha,lugar,contenido)
 			VALUES ('{$mysqli->real_escape_string($_POST['titulo'])}',
 			'{$mysqli->real_escape_string($_POST['fecha'])}',
+			'{$mysqli->real_escape_string($_POST['lugar'])}',
 			'{$mysqli->real_escape_string($_POST['contenido'])}')";
 		$insert = $mysqli->query($sql);
 		if (! $insert) {

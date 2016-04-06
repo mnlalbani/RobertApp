@@ -16,6 +16,7 @@ $(document).ajaxComplete(function(){
 			$('#response').html(data);
 		});
 	});
+	$('#formulario_reciente').unbind('submit'); 
 	$('#formulario_reciente').on('submit',function(e){
         e.preventDefault();
         var details = $('#formulario_reciente').serialize();
