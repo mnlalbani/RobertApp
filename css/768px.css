@@ -175,115 +175,98 @@ a:focus, a:hover {
   float: right;
 }
 
-.text1{
+/*odd*/
+.elemento:nth-child(odd) .text1{
   width: 50%;
-  height: 250px;
+  height: 300px;
   background-color: #fff;
   float: left;
 
 }
-.text1 h1{
+
+.elemento:nth-child(odd) .text1 h1{
   margin: 0;
-  font-size: 14px;
-  padding:  20px 45px 10px 30px;
-  font-weight: lighter;
+  font-size: 15px;
+  padding:  40px 40px 0px 40px;
+  font-weight: normal;
   text-transform: uppercase;
 }
 
-.text1 h2{
-  margin: 0;
-  font-size: 16px;
+.elemento:nth-child(odd) .text1 h2{
+  margin: 15px 0 0px 0;
+  font-size: 20px;
   color: #121212;
   font-weight: bold;
   text-transform: uppercase;
-  padding:  0 0px 0 30px;
+  padding:  0 0px 0 40px;
+  font-weight: bold;
+
 }
 
-.text1 p{
+.elemento:nth-child(odd) .text1 p{
   margin: 0;
-  font-size: 14px;
-  padding:  10px 45px 0px 30px;
+  font-size: 15px;
+  padding:  10px 40px 0px 40px;
   font-weight: 400;
   line-height: 1.5em;
   text-align: left;
 }
 
-
-.img2 h2{
-  margin: 0;
-  font-size: 16px;
-  color: #121212;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding:  0 0px 0 30px;
-
-}
-.img2 p{
-  margin: 0;
-  font-size: 14px;
-  padding:  10px 45px 0px 30px;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-align: left;
-}
-
-.img2 h1{
-  margin: 0;
-  font-size: 14px;
-  padding:  20px 45px 10px 30px;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-
-.img1{
+.elemento:nth-child(odd) .img1{
   width: 50%;
   background-color: green;
   float: right;
   background-size: cover;
-  height: 250px;
+  height: 300px;
+}
+/*fin odd*/
+/*even*/
+
+.elemento:nth-child(even) .text1 h2{
+  margin: 15px 0 0px 0;
+  font-size: 20px;
+  color: #121212;
+  text-transform: uppercase;
+  padding:  0 0px 0 40px;
+  font-weight: bold;
 }
 
-.text2{
+.elemento:nth-child(even) .text1 p{
+  margin: 0;
+  font-size: 15px;
+  padding:  10px 40px 0px 40px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.elemento:nth-child(even) .text1 h1{
+  margin: 0;
+  font-size: 15px;
+  padding:  40px 50px 0px 40px;
+  font-weight: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.elemento:nth-child(even) .img1{
   width: 50%;
-  height: 250px;
+  height: 300px;
   background-color: yellow;
   float: left;
 }
-
-.text2 img{
+.elemento:nth-child(even) .img1 img{
   background-size: cover;
   width: 100%;
 }
 
-.img2{
+.elemento:nth-child(even) .text1{
   width: 50%;
-  height: 250px;
+  height: 300px;
   background-color: #f2edea;
   float: right;
 }
-
-
-
-.text3{
-  width: 50%;
-  height: 250px;
-  background-color: #fff;
-  float: left;
-}
-
-.img3 img{
-  background-size: cover;
-  width: 100%;
-}
-
-.img3{
-  width: 50%;
-  background-color: green;
-  float: right;
-  height: 250px;
-}
-
-
+/*fin even*/
 
 /*-------- PROXIMAS NOTICIAS---------- */
 

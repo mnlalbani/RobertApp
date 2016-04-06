@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/secciones.css">
-	<!--<link rel="stylesheet" href="css/768px.css">-->
+	<link rel="stylesheet" href="css/768px.css">
 	<link rel="stylesheet" href="css/1200px.css">
 	
 	<!-- ////////////////////////// js /////////////////////////// -->
