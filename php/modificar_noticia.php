@@ -57,7 +57,7 @@
 	                        </div>
 	                     -->
 	                        <button  name='submit' class='boton-login btn-block' type='submit'>
-	                          PUBLICAR NOTICIA
+	                          MODIFICAR NOTICIA
 	                        </button>
 	                      </form>
 	                      <div id='response'></div>
@@ -107,7 +107,8 @@
 				die("Error: {$mysqli->errno} : {$mysqli->error}");
 			};
 			$mysqli->close();
-			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>" ;
+			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>
+			<a class='' href='' id='editar_noticia_reciente'> Volver a la listaRecientes</a>";
 		}
 	}
  ?>
