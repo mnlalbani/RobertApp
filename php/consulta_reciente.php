@@ -7,7 +7,6 @@
 	$result = $mysqli->query($sql);
 
 	while($row = mysqli_fetch_array($result)) {
-		//$url = "http://localhost/pruebas/rotary/actividades.php?cod=". $row['codigo'];
 	    echo "<div class='elemento'>";
 		echo	"<div class='text1'>";
 		echo	"<h1>". $row['fecha'] ."</h1>";

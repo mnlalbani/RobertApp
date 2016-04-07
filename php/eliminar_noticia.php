@@ -22,4 +22,15 @@ include("connection.php");
 	$mysqli->close();
 	echo "<p>Noticia eliminada</p>";
 	}
+	if($_POST['tipo'] == 'usuario'){
+		var_dump($_SERVER);
+		var_dump($_GET);
+		var_dump($_POST);
+	$codigo = $_POST['codigo'];
+	$sql = "DELETE FROM `usuario` WHERE `codigo` = $codigo";
+	echo $sql;
+	$result = $mysqli->query($sql);
+	$mysqli->close();
+	echo "<p>Usuario eliminado</p>";
+	}
 ?>

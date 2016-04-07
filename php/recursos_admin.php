@@ -144,7 +144,7 @@
                 <ol class="breadcrumb">
                   <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                   <li><i class="icon_document_alt"></i>Noticias</li>
-                  <li><i class="fa fa-file-text-o"></i>Noticias recientes</li>
+                  <li><i class="fa fa-file-text-o"></i>Noticias Proximas</li>
                 </ol>
               </div>
             </div>
@@ -238,10 +238,10 @@
           <section class="wrapper" id="vista_listar_noticias_proximas">
             <div class="row">
               <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Usuarios</h3>
+                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Próximas Noticias</h3>
                 <ol class="breadcrumb">
                   <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
-                  <li><i class="icon_document_alt"></i>Ver o Editar Usuarios</li>
+                  <li><i class="icon_document_alt"></i>Ver o Editar Próximas Próximas</li>
                 </ol>
               </div>
             </div>

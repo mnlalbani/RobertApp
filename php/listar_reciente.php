@@ -9,7 +9,7 @@
 		echo 	"<td>". $row['lugar']."</td>";
 		echo 	"<td>";
 		echo 		"<div class='btn-group'>";
-		echo  			"<a class='btn btn-success' href='' value='". $row['codigo']."'><i class='icon_check_alt2'></i></a>";
+		echo  			"<a class='btn btn-success modificar' href='' value='". $row['codigo']."'><i class='icon_check_alt2'></i></a>";
 		echo  			"<a class='btn btn-danger eliminar'  href='' tipo='reciente' titulo='". $row['titulo']. "'value='".$row['codigo']."'><i class='icon_close_alt2'></i></a>";
 		echo 		"</div>";
 		echo 	"</td>";

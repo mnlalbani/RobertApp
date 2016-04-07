@@ -25,6 +25,22 @@ $(document).ajaxComplete(function(){
           	$('#response').html(data);
         });
 	});
+
+
+	$('#formulario_modificar').unbind('submit'); 
+	$('#formulario_modificar').on('submit',function(e){
+        e.preventDefault();
+        var modificar = 'modificar';
+        var codigo =  $(this).attr('codigo');
+        var details = $('#formulario_modificar').serialize();
+        $.post('php/modificar_noticia.php',details,function(data){
+        	console.log(details);
+        	//$("form").trigger("reset");
+          	$('#response').html(data);
+        });
+	});
+	
+//----------Eliminar----------//
 	$('.eliminar').unbind('click'); 
 	$('.eliminar').click(function(e){
 		e.preventDefault();
@@ -32,7 +48,7 @@ $(document).ajaxComplete(function(){
 		var codigo = $(this).attr('value');
 		var titulo = $(this).attr('titulo');
 		var tipo = $(this).attr('tipo');
-		    if (confirm("¿Está seguro que desea eliminar la noticia "+titulo+"?") == true) {
+		    if (confirm("¿Está seguro que desea eliminar  <b>"+titulo+"</b>?") == true) {
 		        $.post('php/eliminar_noticia.php',{codigo:codigo,tipo:tipo},function(data){
 		        tr.hide("slow", function(){ 
 		        	 	$(this).remove();
@@ -43,5 +59,17 @@ $(document).ajaxComplete(function(){
 		    } else {
 		     	return false;
 		    }
+	});
+
+//----------Modificar----------//
+	$('.modificar').unbind('click');
+	$('.modificar').click(function(e){
+		e.preventDefault();
+		var codigo = $(this).attr('value');
+		var consulta = "consulta";
+		$.post('php/modificar_noticia.php',{codigo:codigo,consulta:consulta},function(data){
+			$('#main-content').html(data);
+			//.load('php/modificar_noticia.php?codigo='+codigo+'&consulta='+consulta);
+		});
 	});
 });
