@@ -30,5 +30,9 @@ $(document).ajaxComplete(function(){
 		$('#main-content').load('php/recursos_admin.php #vista_listar_noticias_proximas');
 		return false;
 	});
+	$('#lista_mod_usuario').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_listar_usuario');
+		return false;
+	});
 });
 

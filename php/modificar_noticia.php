@@ -2,17 +2,17 @@
 	if (isset($_POST['consulta'])) {
 		include_once('connection.php');
 		$data = array();
-		$sql = "SELECT * FROM `reciente` WHERE `codigo` = $_POST[codigo]";
+		$sql = "SELECT * FROM `$_POST[tipo]` WHERE `codigo` = $_POST[codigo]";
 		$result = $mysqli->query($sql);
 		while($row = mysqli_fetch_array($result)) {
 			echo "<section class='wrapper' id='vista_subir_noticias_recientes'>
 	                <div class='row'>
 	                  <div class='col-lg-12'>
-	                    <h3 class='page-header'><i class='fa fa-file-text-o'></i> NOTICIAS RECIENTES</h3>
+	                    <h3 class='page-header'><i class='fa fa-file-text-o'></i> NOTICIAS ".strtoupper($_POST['tipo'])."S</h3>
 	                      <ol class='breadcrumb'>
 	                        <li><i class='fa fa-home'></i><a href='index.php'>Inicio</a></li>
 	                        <li><i class='icon_document_alt'></i>Noticias</li>
-	                        <li><i class='fa fa-file-text-o'></i>Noticias recientes</li>
+	                        <li><i class='fa fa-file-text-o'></i>Noticias ".$_POST['tipo']."s</li>
 	                      </ol>
 	                  </div>
 	                </div>
@@ -25,6 +25,7 @@
 	                    <div class='panel-body'>
 	                      <form class='form-horizontal ' method='post' id='formulario_modificar' action='' codigo='".$row['codigo']."'>
 	                      	<input type='text' value='".$row['codigo']."' hidden name='codigo'>
+	                      	<input type='text' value='".$_POST['tipo']."' hidden name='tipo'>
 	                        <div class='form-group'>
 	                          <label class='col-sm-2 control-label'>Titulo:</label>
 	                        <div class='col-sm-10'>
@@ -99,7 +100,7 @@
 			$data['success'] = true;
 			$data['message'] = 'success!';
 
-			$sql ="UPDATE `reciente`
+			$sql ="UPDATE `$_POST[tipo]`
 		          SET `titulo` = '".$_POST['titulo']."', `fecha` = '".$_POST['fecha']."', `lugar` = '".$_POST['lugar']."',`contenido` = '".$_POST['contenido']."' WHERE `codigo` = '".$_POST['codigo']."'";
       		//echo $sql;
       		$result = $mysqli->query($sql);
@@ -108,7 +109,8 @@
 			};
 			$mysqli->close();
 			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>
-			<a class='' href='' id='editar_noticia_reciente'> Volver a la listaRecientes</a>";
+			 <a class='' href='' id='editar_noticia_".$_POST['tipo']."'> Volver a la lista de Noticias </a>";
 		}
 	}
+
  ?>
