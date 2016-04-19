@@ -9,19 +9,18 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <!-- Bootstrap CSS -->    
-    <link href="css/cssadmin/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
-    <link href="css/cssadmin/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />    
     <!-- full calendar css-->
     
-    <link href="css/cssadmin/style.css" rel="stylesheet">
-    <link href="css/cssadmin/style-responsive.css" rel="stylesheet" />
-    
-    <link href="css/cssadmin/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
     <link href="css/768px.css" rel="stylesheet">
     <link href="css/1200px.css" rel="stylesheet">
 
@@ -36,18 +35,18 @@
 
     <div class="container">
 
-      <form class="login-form" action="index.html">        
+      <form class="login-form" method="POST" action="php/log.php">        
         <div class="login-wrap">
             <p class="login-img">rotary cumana<i class="icon_lock_alt"></i></p>
             <div class="input-group">
               <span class="input-group-addon"><i class="icon_profile"></i></span>
-              <input type="text" class="form-control" placeholder="Username" autofocus>
+              <input type="text" class="form-control" placeholder="Username" name="usuario" autofocus>
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" name="password">
             </div>
-             <button class="boton-login btn-block" type="submit">ENTRAR</button>
+            <button class="boton-login btn-block" type="submit">ENTRAR</button>
             <button class="boton-regis  btn-block" type="submit">REGISTRARSE</button>
         </div>
       </form>

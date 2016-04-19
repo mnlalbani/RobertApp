@@ -42,15 +42,15 @@
 	                          </div>
 	                        </div>
 	          				<div class='form-group'>
-	                          <label class='col-sm-2 control-label'>Lugar:</label>
+	                          <label class='col-sm-2 control-label'>Correo:</label>
 	                          <div class='col-sm-10'>
 	                            <input type='text' class='form-control' placeholder='Correo del usuario..' id='correo' name='correo' value='".$row['correo']."'>
 	                          </div>
 	                        </div>
 	                       	<div class='form-group'>
-	                          <label class='col-sm-2 control-label'>Lugar:</label>
+	                          <label class='col-sm-2 control-label'>Teléfono:</label>
 	                          <div class='col-sm-10'>
-	                            <input type='text' class='form-control' placeholder='Telefono del usuario..' id='telefono' name='telefono' value='".$row['telefono']."'>
+	                            <input type='text' class='form-control' placeholder='Telefono del usuario..' id='telefono' name='telefono' value='".$row['telefono']."' maxlength='11'>
 	                          </div>
 	                        </div>
 	                        <button  name='submit' class='boton-login btn-block' type='submit'>
@@ -90,20 +90,20 @@
 			$data['success'] = false;
 			$data['errors'] = $errors;
 
-			echo json_encode($data);
+			//echo json_encode($data);
 		} else{
 			$data['success'] = true;
 			$data['message'] = 'success!';
 
 			$sql ="UPDATE `usuario`
 		          SET `nombre` = '".$_POST['nombre']."', `apellido` = '".$_POST['apellido']."', `ciudad` = '".$_POST['ciudad']."',`correo` = '".$_POST['correo']."',`telefono` = '".$_POST['telefono']."' WHERE `codigo` = '".$_POST['codigo']."'";
-      		//echo $sql;
+      		var_dump($_POST);
       		$result = $mysqli->query($sql);
 			if (! $result) {
 				die("Error: {$mysqli->errno} : {$mysqli->error}");
 			};
 			$mysqli->close();
-			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>
+			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Usuario Modificado</p>
 			 <a class='' href='' id='lista_mod_usuario'> Volver a la lista de Usuarios </a>";
 		}
 

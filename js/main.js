@@ -89,4 +89,13 @@ $(document).ajaxComplete(function(){
           	$('#response').html(data);
         });
 	});
+	$('#formulario_subir_usuarios').unbind('submit');
+	$('#formulario_subir_usuarios').on('submit',function(e){
+		e.preventDefault();
+		var details = $('#formulario_subir_usuarios').serialize();
+		$.post('php/subir_usuario.php',details,function(data){
+			$("form").trigger("reset");
+			$('#response').html(data);
+		});
+	});
 });

@@ -57,15 +57,7 @@
                       <!-- alert notification end-->
                       <!-- user login dropdown start-->
                       <li class="dropdown">
-                          <a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
-                              <span class="username">Jenifer Smith</span>
-                              <b class="caret"></b>
-                          </a>
-                          <ul class="dropdown-menu extended logout">
-                              <div class="log-arrow-up"></div>
-                              <li>
-                                  <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-                              </li>
+                            <?php include("php/session_admin.php"); ?>
                               <li>
                                   <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
                               </li>
@@ -99,30 +91,17 @@
                             <li><a class="" href="" id="proxima">Proximas</a></li>
                         </ul>
                   </li>       
-                  <li class="sub-menu">
-                        <a href="javascript:;" class="">
-                            <i class="icon_desktop"></i>
-                            <span>Secciones</span>
-                            <span class="menu-arrow arrow_carrot-right"></span>
-                        </a>
-                        <ul class="sub">
-                            <li><a class="" href="form_component.html">Sobre Nosotros</a></li>
-                            <li><a class="" href="form_component.html">Sobre Rotary</a></li>
-                            <li><a class="" href="form_component.html">Consultas externas</a></li>
-                            <li><a class="" href="form_component.html">Sala de Rehabilitacion</a></li>
-                            <li><a class="" href="form_component.html">Fabricacion de protesis</a></li>
-                            <li><a class="" href="form_component.html">Directiva</a></li>
-                        </ul>
-                  </li>
-                  <li class="sub-menu">
+                  <!--<li class="sub-menu">
                         <a href="javascript:;" class="">
                             <i class="icon_desktop"></i>
                             <span>Usuarios</span>
                             <span class="menu-arrow arrow_carrot-right"></span>
                         </a>
-                        <ul class="sub">
-                        <li><a class="" href="" id="usuario">Ver/Editar los usuarios</a></li>
-                  </li>
+                        <ul class="sub"> -->
+                        <li class="sub-menu">
+                          <a <?php include("php/condicional_admin.php") ?>><i class="icon_desktop"></i>Usuarios</a>
+                        </li>
+                  <!--</li>-->
                 </ul>
                 <!-- sidebar menu end-->
             </div>

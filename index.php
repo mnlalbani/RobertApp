@@ -1,5 +1,4 @@
-<?php include_once('php/connection.php');
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +35,6 @@
 
 
 <body data-spy="scroll" data-target="#navegacion">
-	
 	<!-- ////////////////////////// NAV-XS /////////////////////////// -->
 
 	<nav class="navbar navbar-default navbar-fixed-top hidden-lg visible-xs">
@@ -114,7 +112,7 @@
 	
 
 	<!-- ////////////////////////// INICIO /////////////////////////// -->
-	
+		
 	<section id="inicio">
 		<div id="slider-inicio" class="carousel slide">
 			<div class="carousel-inner" >
@@ -258,8 +256,8 @@
 				<hr>
 				<div class="text-footer">
 					<h2>Todos los derechos reservados. Rotary Cumaná</h2>
-					<a href="actividades.php?cod=24">actividad</a>
-					
+					<?php include("php/enlace_admin.php"); ?>
+					<?php include_once('php/connection.php');?>
 				</div>
 			</div>
 		</div>

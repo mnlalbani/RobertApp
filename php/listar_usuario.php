@@ -8,7 +8,7 @@
 		echo 	"<td>". date('d-m-Y', strtotime($row['fechaRegistro'])). "</td>";
 		echo 	"<td>". $row['correo']. "</td>";
 		echo 	"<td>". $row['ciudad']. "</td>";
-		echo 	"<td>"."0".$row['telefono']. "</td>";
+		echo 	"<td>".$row['telefono']. "</td>";
 		echo 	"<td>";
 		echo 		"<div class='btn-group'>";
 		echo  			"<a class='btn btn-success modificar_u' href='' value='".$row['codigo']."'><i class='icon_check_alt2'></i></a>";

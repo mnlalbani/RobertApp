@@ -8,9 +8,14 @@ $(document).ready(function(){
 		return false;
 	});
 	$('#usuario').click(function(){
-		$('#main-content').load('php/recursos_admin.php #vista_listar_usuario');
+		$('#main-content').load('php/recursos_admin.php #vista_portada_usuarios');
 		return false;
 	});
+	$('#notAllowed').hover(function(){
+		$(this).css('cursor','not-allowed');
+	});
+
+
 });
 
 $(document).ajaxComplete(function(){
@@ -32,6 +37,10 @@ $(document).ajaxComplete(function(){
 	});
 	$('#lista_mod_usuario').click(function(){
 		$('#main-content').load('php/recursos_admin.php #vista_listar_usuario');
+		return false;
+	});
+	$('#subir_usuarios').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_subir_usuarios');
 		return false;
 	});
 });

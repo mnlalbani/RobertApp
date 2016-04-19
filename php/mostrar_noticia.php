@@ -5,7 +5,6 @@
 	var_dump($_SERVER);
 	var_dump($_GET);
 	var_dump($_POST);
-	
 	*/
 	$sql = "SELECT * FROM reciente WHERE codigo = '$_GET[codigo]' ";
 	$result = $mysqli->query($sql);
