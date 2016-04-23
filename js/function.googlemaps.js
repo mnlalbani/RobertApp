@@ -14,88 +14,37 @@ function initialize() {
     map.set('styles', [
     {
         "featureType": "water",
-        "elementType": "geometry",
+        "elementType": "all",
         "stylers": [
             {
-                "color": "#e9e9e9"
+                "hue": "#7fc8ed"
             },
             {
-                "lightness": 17
+                "saturation": 55
+            },
+            {
+                "lightness": -6
+            },
+            {
+                "visibility": "on"
             }
         ]
     },
     {
-        "featureType": "landscape",
-        "elementType": "geometry",
+        "featureType": "water",
+        "elementType": "labels",
         "stylers": [
             {
-                "color": "#f5f5f5"
+                "hue": "#7fc8ed"
             },
             {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
+                "saturation": 55
             },
             {
-                "lightness": 17
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
+                "lightness": -6
             },
             {
-                "lightness": 29
-            },
-            {
-                "weight": 0.2
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 18
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 21
+                "visibility": "off"
             }
         ]
     },
@@ -104,89 +53,148 @@ function initialize() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#dedede"
+                "hue": "#83cead"
             },
             {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "elementType": "labels.text.stroke",
-        "stylers": [
+                "saturation": 1
+            },
+            {
+                "lightness": -15
+            },
             {
                 "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
             }
         ]
     },
     {
-        "elementType": "labels.text.fill",
+        "featureType": "landscape",
+        "elementType": "geometry",
         "stylers": [
             {
-                "saturation": 36
+                "hue": "#f3f4f4"
             },
             {
-                "color": "#333333"
+                "saturation": -84
             },
             {
-                "lightness": 40
+                "lightness": 59
+            },
+            {
+                "visibility": "on"
             }
         ]
     },
     {
-        "elementType": "labels.icon",
+        "featureType": "landscape",
+        "elementType": "labels",
         "stylers": [
+            {
+                "hue": "#ffffff"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 100
+            },
             {
                 "visibility": "off"
             }
         ]
     },
     {
-        "featureType": "transit",
+        "featureType": "road",
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#f2f2f2"
+                "hue": "#ffffff"
             },
             {
-                "lightness": 19
+                "saturation": -100
+            },
+            {
+                "lightness": 100
+            },
+            {
+                "visibility": "on"
             }
         ]
     },
     {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
+        "featureType": "road",
+        "elementType": "labels",
         "stylers": [
             {
-                "color": "#fefefe"
+                "hue": "#bbbbbb"
             },
             {
-                "lightness": 20
+                "saturation": -100
+            },
+            {
+                "lightness": 26
+            },
+            {
+                "visibility": "on"
             }
         ]
     },
     {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
+        "featureType": "road.arterial",
+        "elementType": "geometry",
         "stylers": [
             {
-                "color": "#fefefe"
+                "hue": "#ffcc00"
             },
             {
-                "lightness": 17
+                "saturation": 100
             },
             {
-                "weight": 1.2
+                "lightness": -35
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#ffcc00"
+            },
+            {
+                "saturation": 100
+            },
+            {
+                "lightness": -22
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.school",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#d7e4e4"
+            },
+            {
+                "saturation": -60
+            },
+            {
+                "lightness": 23
+            },
+            {
+                "visibility": "on"
             }
         ]
     }
 ]
+
+
 );
   var content = '<div id="iw-container">' +
                     '<div class="iw-title">Club Rotary Cumana</div>' +

@@ -1,12 +1,13 @@
 /*////// INDEX ////////*/
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
 html{
   height: 100%;
   width: 100%;
 }
 
 body{
-	font-family: 'Open Sans', sans-serif;
 	height: 100%;
   width: 100%;
 	position: relative;
@@ -46,15 +47,11 @@ body{
 }
 
 #inicio .carousel-inner {
-  background: url(../img/casco.jpg);
   height: 100%;
   background-size: cover; 
-  background-attachment: fixed;
-  background-repeat: repeat-y;
-  background-position: 50% 0;    
-  transition: 0.5s ease;
-  transform: translate3d(0, 0, 0);
-  transition-property: background-position;
+  
+  
+  
 }
 
 .overlay-slider{
@@ -79,13 +76,14 @@ body{
 /*-------- SOMOS ROTARY---------- */
 
 #somos h2{
-  color: #121212;
+  color: #000;
   font-weight: bolder;
   text-align: center;
-  font-size: 34px;
+  font-size: 45px;
   text-transform: uppercase;
   line-height: 1.8em;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #somos{
@@ -96,12 +94,13 @@ body{
 }
 
 #somos p{
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 17px;
+  font-weight: normal;
   line-height: 1.9;
-  color: #121212;
+  color: #777;
   margin: 0px 90px 70px 90px;
   text-align: center;
+   font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #somos:after {
@@ -119,27 +118,30 @@ body{
 }
 
 #nosotros h2{
-  color: #121212;
-  letter-spacing: -1px;
+  color: #000;
+  letter-spacing: 0.5px;
   font-weight: bold;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: uppercase;
   line-height: 1.8em;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #nosotros p{
-  font-family: 'Open Sans',Arial,sans-serif !important;
+  
+  font-weight: normal;
+  
+  color: #777;
   font-size: 15px;
-  font-weight: 100;
-  line-height: 1.9;
-  color: #121212;
-  margin: 0 30px 5px 30px;
+    line-height: 1.75;
+  margin: 0 0px 5px 0px;
   text-align: center;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #nosotros img{
-  width: 23%;
+  width: 20%;
 }
 
 #nosotros{
@@ -161,7 +163,7 @@ body{
 /*----- CENTRO MEDICO --------*/
 
 .centro-medico{
-  background-color:  #f0f0f0;
+  background-color:  #F6F6F7;
   position: relative;
   padding: 60px 0 60px 0;
 }
@@ -176,18 +178,68 @@ body{
 
 #gmap {
   position:relative;
-  height: 340px;
+  height: 250px;
   width: 100%;
 }
 
-.contactos{
-  margin: 20px 0 0 0;
-  border: 1px solid  #BCBDC0;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
--moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+.text-footer{
+  float: right;
+  width: 33.3%;
+  
 }
 
+.text-footer h2{
+ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ font-size: 15px;
+ letter-spacing: 1px;
+ font-weight: normal;
+ float: right;
+ padding: 30px 0 30px 0;
+ color: #BCBDC0;
+ margin: 0;
+ text-transform: uppercase;
+}
+.iconos{
+  float: left;
+  width: 33.3%;
+  display: inline-block;
+}
+
+.text-center-foot{
+  width: 33.33%;
+  float: left;
+}
+.text-center-foot h2{
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ font-size: 15px;
+ letter-spacing: 1px;
+ font-weight: normal;
+ text-align: center;
+ padding: 30px 0 30px 0;
+ color: #BCBDC0;
+ margin: 0;
+ text-transform: uppercase;
+}
+.iconos a i{
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bol;
+  padding: 20px 0 15px 0;
+  margin:0 15px 0 0;
+}
+.iconos a{
+  color: #919295;
+}
+
+.iconos a:hover{
+  color: #E7E7E8;
+  transition: .3s all ease;
+}
+
+#footer{
+  width: 100%;
+  background-color: #0a0a0a;
+}
 .gm-style-iw {
   width: 350px !important;
   top: 15px !important;
@@ -259,122 +311,109 @@ box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
    font-weight: bold;
 }
 
-/*-------- BOTONES ---------- */
 
-.boton-slider:hover{
-  background-color:    #17458f;
-  color: #fff;
-  border-color:   #17458f;
-  transition:.5s all;
-}
-
-.boton-nosotros:hover{
-  background-color:    #17458f;
-  color: #fff;
-  border-color:   #17458f;
-  transition:.5s all;
-}
-
-.boton-news:hover{
-  background-color:    #17458f;
-  color: #fff;
-  border-color:   #17458f;
-  transition:.5s all;
-}
-
-.boton-donacion:hover{
-  background-color:    #17458f;
-  color: #fff;
-  border-color:   #17458f;
-  transition:.5s all;
-}
-
-.boton-prox:hover{
-  background-color:    #f7a81b;
-  color: #fff;
-  border-color:   #f7a81b;
-  transition:.5s all;
-}
 
 .form-wall{
   width: 100%;
   height: 450px;
-  background-color: #E7E7E8;
+  background-color: transparent;
   margin: 0px 0 50px 0;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
 
 }
 
 textarea:focus { outline: none; box-shadow: none; }
 
 
-#contact-form input[type="text"], #contact-form input[type="email"]{    
-    border-bottom: 2px solid #BCBDC0;
+#contact-form .form-control {
+    display: block;
+    margin-bottom:20px;
+    width: 100%;
+    height: 50px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #f6f6f7;
+    background-image: none;
+    border: 1px solid #E7E7E8;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
     box-shadow: none;
-    font-size: 16px;
-    border-radius: 0;
-    border-top: none;
-    border-left: none;
-    border-right: none; 
-    background-color: transparent;
-}
-#contact-form textarea{
-  border: none;
-  border-radius: 0;
-}
-#contact-form input[type="text"]:hover, #contact-form input[type="email"]:hover {    
-    border-bottom: 2px solid #005DAA;
-    transition:.6s;
-     
-}
-.form-wall label{
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 15px;
-  margin: 0px 0 10px 0;
-}
-.titulo-wall h2{
-  padding: 20px;
-  background-color: #005DAA;
-  margin: 50px 0 0 0;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 #contact-form{
   padding: 20px;
-}
-
-textarea.form-control {
-    height: 150px;
-
-}
-
-.direccion-form span{
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
-}
-
-.direccion-form h2{
-  font-size: 18px;
-  font-weight: normal;
-  color: #000;
-  margin: 15px 0 15px 0;
-}
-
-.direccion-form{
   margin: 50px 0 0 0;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 5px;
+}
+#contact-form ::-webkit-input-placeholder {
+   font-size: 15px; 
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #BCBDC0;
+  text-transform: uppercase;
 }
 
-.direccion-form i{
-  margin: 0 10px 0 0px;
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #E7E7E8;
+}
+
+
+.carousel-control .icon-prev:before {
+    
+    content: url(../img/arrowleft.png);
+    
+}
+
+.carousel-control .icon-next:before {
+    content: url(../img/arrowright.png);
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    color: #fff;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: 1;
+}
+.carousel .carousel-control { visibility: hidden; transition:visibility 5s;}
+.carousel:hover .carousel-control { visibility: visible; }
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: none;
+    filter: none;
+    opacity: .5;
+}
+
+.carousel-control.left {
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    filter: none;
+    background-repeat: repeat-x;
+}
+.carousel-control.right {
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    filter: none;
+    background-repeat: repeat-x;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: 20px;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: 20px;
 }

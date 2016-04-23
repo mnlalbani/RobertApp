@@ -11,7 +11,7 @@
 		echo 	"<td>".$row['telefono']. "</td>";
 		echo 	"<td>";
 		echo 		"<div class='btn-group'>";
-		echo  			"<a class='btn btn-success modificar_u' href='' value='".$row['codigo']."'><i class='icon_check_alt2'></i></a>";
+		echo  			"<a class='btn btn-success modificar_u' href='' value='".$row['codigo']."'><i class='fa fa-pencil-square-o'></i></a>";
 		echo  			"<a class='btn btn-danger eliminar' titulo='". $row['nombre']." ".$row['apellido']."' value='".$row['codigo']."' tipo='usuario' href=''><i class='icon_close_alt2'></i></a>";
 		echo 		"</div>";
 		echo 	"</td>";

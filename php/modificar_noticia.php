@@ -108,8 +108,8 @@
 				die("Error: {$mysqli->errno} : {$mysqli->error}");
 			};
 			$mysqli->close();
-			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>
-			 <a class='' href='' id='editar_noticia_".$_POST['tipo']."'> Volver a la lista de Noticias </a>";
+			echo "<p style='margin:10px 0 10px 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Noticia Modificada</p>
+			 <a class='volver' href='' id='editar_noticia_".$_POST['tipo']."'><i class='fa fa-long-arrow-left' style='margin-right:10px;'> Volver a la lista de Noticias </a>";
 		}
 	}
 

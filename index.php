@@ -3,11 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	
-	<!-- ////////////////////////// Fonts Google /////////////////////////// -->
-
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- ////////////////////////// CSS /////////////////////////// -->
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
@@ -16,7 +12,8 @@
 	<link rel="stylesheet" href="css/secciones.css">
 	<link rel="stylesheet" href="css/768px.css">
 	<link rel="stylesheet" href="css/1200px.css">
-	
+	<link href="css/scrolling-nav.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/vistamovil.css">
 	<!-- ////////////////////////// js /////////////////////////// -->
 
 	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
@@ -27,89 +24,57 @@
 	<script type="text/javascript" src="js/function.smothscrolling.js"></script>
 	<script type="text/javascript" src="js/function.googlemaps.js"></script>
 	<script type="text/javascript" src="js/photo-gallery.js"></script>
-	<script src="js/flipclock.min.js"></script>
-	<script src="js/window.js"></script>
-	<script src="js/shrink.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 </head>
 
 
-<body data-spy="scroll" data-target="#navegacion">
-	<!-- ////////////////////////// NAV-XS /////////////////////////// -->
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-	<nav class="navbar navbar-default navbar-fixed-top hidden-lg visible-xs">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+    <!-- ////////////////////////// NAV /////////////////////////// -->
     
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid container-arre">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.php" class="navbar-brand">
+                	<img class="logo-lg visible-lg visible-md hidden-xs" src="img/logonuevoa.png" alt="">
+                	<img class="logo-xs visible-xs hidden-lg hidden-md" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                        <a class="page-scroll" href="#inicio">INICIO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#somos">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll visible-md hidden-lg" href="#rotary">ROTARY</a>
+                        <a class="page-scroll visible-lg visible-xs hidden-md" href="#rotary">¿QUE ES  ROTARY?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#news">ACTIVIDADES</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#medical">SALUD</a>
+                    </li>
+                  
+                    <li>
+                        <a class="page-scroll" href="#contactos">CONTACTOS</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-	
-	<!-- ////////////////////////// NAV-LG /////////////////////////// -->
+    </nav>
 
-	<header class="navbar-index hidden-xs">
-	    <div class="container-fluid container-fluidnav clearfix">
-	        <div id="logo">
-	            <img src="img/logonuevo.png" alt="">
-	        </div>
-	        <nav>
-	            <a href="admin/login.html">INICIO</a>
-	            <a href="">NOSOTROS</a>
-	            <a href="">QUE ES ROTARY?</a>
-	            <a href="">CENTRO MEDICO</a>
-	            <a href="">ACTIVIDADES</a>
-	            <a href="">CONTACTOS</a>
-	        </nav>
-	    </div>
-	</header>
-	
 
 	<!-- ////////////////////////// INICIO /////////////////////////// -->
 		
@@ -118,11 +83,26 @@
 			<div class="carousel-inner" >
 	        	<div class="overlay-slider"></div>
 		        <div class="item active">
-		        	<div class="fill"></div>
+		        	<div class="fill" style="background-image:url('img/slider1.jpg');"></div>
 		            	<div class="col-md-12">
 			            	<div class="carousel-caption">
-			                	<h2>BIENVENIDOS A <br> ROTARY CUMANÁ <br> </h2>
-			                	<button href="" type="button" class="boton-slider ">CONOCENOS</button>
+			                	
+			                </div>
+		            	</div>
+		        </div>
+		        <div class="item">
+		        	<div class="fill" style="background-image:url('img/slider2.jpg');"></div>
+		            	<div class="col-md-12">
+			            	<div class="carousel-caption">
+			                	
+			                </div>
+		            	</div>
+		        </div>
+		        <div class="item">
+		        	<div class="fill" style="background-image:url('img/cumana.jpg');"></div>
+		            	<div class="col-md-12">
+			            	<div class="carousel-caption">
+			                	
 			                </div>
 		            	</div>
 		        </div>
@@ -131,7 +111,11 @@
 		        
 		       
 		    </div>
-		
+		<a class="left carousel-control" href="#slider-inicio" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#slider-inicio" data-slide="next">
+            <span class="icon-next"></span></a>
 	</section>	
 
 
@@ -142,38 +126,60 @@
 			<div class="container">
 				<h2>Somos Rotary Cumana</h2>
 				<p>Somos una organizaciòn que brindamos servicios humanitarios a travès de proyectos orientados a beneficiardd a las comunidades y a la gente de escasos recursos de la ciudad de Cumanà y sectores   cercanos,  y  nos  alienta, como todos los clubes rotarios, elevadas normas de ética en todas las ocupaciones que ayudan a crear buena voluntad y paz en el mundo.
-</p>
+				</p>
 			</div>
 		</div>
 	</section>
 	
-	<!-- /////////////////// SOBRE  /////////////////// -->
+	<!-- /////////////////// NOSOTROS  /////////////////// -->
 	
 	<section id="nosotros">
 		<div class="row">
 			<div class="container">
 				<div class="col-md-4 text-center">
+				<a href="nosotros.php">
 					<img src="img/icon.png" alt="">
 					<h2>sobre nosotros</h2>
-					<p>Conoce todo sobre nuestro club y la labor que realizamos en toda la comunidad. </p>
-					<button href="nosotros.html" type="button" class="boton-nosotros">CONOCENOS</button>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sit porro atque dolor adipisci nobis </p>
+				</a>		
 				</div>
 				<div class="col-md-4  text-center">
+				<a href="historia.php">	
 					<img src="img/clock.png" alt="">
 					<h2>Nuestra historia</h2>
-					<p>Repasa todos los hechos importantes a lo largo de nuestra historia.</p>
-					<button href="historia.html" type="button" class="boton-nosotros">CONOCENOS</button>	
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sit porro atque dolor adipisci nobis </p>
+				</a>		
 				</div>
 				<div class="col-md-4  text-center">
+				<a href="directiva.php">
 					<img src="img/user.png" alt="">
 					<h2>nuestra directiva</h2>
-					<p>Conoce a toda nuestra junta directiva y como  esta </p>
-					<button href="directiva.html" type="button" class="boton-nosotros">CONOCENOS</button>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sit porro atque dolor adipisci nobis </p>
+				</a>		
 				</div>
 			</div>
 		</div>	
 	</section>
 	
+	<!-- /////////////////// ROTARY  /////////////////// -->
+
+	<section id="rotary">
+		<div class="slider-rot">
+			<div class="content-slider"></div>	
+		</div>
+		<div class="content-rot">
+			
+			<div class="text-rotary">
+				<h2>conoce a <br> rotary <br>internacional</h2>
+				<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, adipisicing elit. Ratione, adipisicing elit. Ratione, </p>
+				<a href="rotary.php"><button  name="submit" value="Acceder" id = "acceder"class="boton-rotary " type="submit">
+                    CONOCE MAS</button></a>
+			</div>
+			
+		</div>
+	</section>
+
+
 	<!-- /////////////////// NOTICIAS /////////////////// -->
 
 	<section id="news">
@@ -190,55 +196,96 @@
 		</div>
 	</section>
 	
-	
-
 	<!-- /////////////////// CENTRO MEDICO /////////////////// -->
 
-	<section class="centro-medico">
+	<section id="medical" class="centro-medico">
 		<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h2>centro rotario de salud</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ab velit laudantium dignissimos ipsa molestiae inventore aliquam exercitationem ipsum, temporibus sapiente consequuntur, quas ad, magnam perspiciatis tenetur maxime tempore! Natus.</p>
-				
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col-md-4 padding-med">
+				<a href="consultas.php">
 				<img src="img/med1.jpg" alt="">
+				
+
 				<div class="text-consul">
 					<h2>CONSULTAS EXTERNAS</h2>
 					<p>Conoce todas las consultas externas que ofrecemos en nuestro centro de salud.</p>
-				<button href="consultasexternas.html" type="button" class="boton-slider">CONOCENOS</button>
 				</div>
-				
+				</a>
 
-			</div>
-			
+		</div>
 			<div class="col-md-4 padding-med">
+				<a href="rehabilitacion.php">
 				<img src="img/med2.jpg" alt="">
 				<div class="text-consul">
 					<h2 style="font-size:24px;">SALA DE FISIATRIA Y REHABILITACION</h2>
 					<p>Conoce una de las salas de Rehabilitacion mas novedosas de todo el estado. </p>
-				<button href="rehabilitacion.html" type="button" class="boton-slider">CONOCENOS</button>
+				
 				</div>
+				</a>
 			</div>
 
 			<div class="col-md-4 padding-med">
+				<a href="protesis.php">
 				<img src="img/med3.jpg" alt="">
 				<div class="text-consul">
 					<h2 style="font-size:24px;">SALA DE FABRICACION DE PROTESIS</h2>
 					<p>Conoce nuestro taller de protesis pionero en ayuda a los discapacitados.</p>
-				<button href="protesis.html" type="button" class="boton-slider">CONOCENOS</button>
+				
 				</div>
+				</a>
 			</div>
 		</div>
 		</div>
 	</section>
 
 	<!-- /////////////////// MAPA GOOGLE /////////////////// -->
-
+	
+	<section id="contactos">
+		<div class="contenido-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					
+	<div class="titulo-direccion">
+		<h2>Visitanos o <br>dejanos un mensaje</h2>
+	</div>
+	<div class="direccion-form">
+		
+		<h2><i class="fa fa-map-marker"></i> Lorem ipsum dolor sit amet, consectetur </h2>
+		<h2><i class="fa fa-phone"></i> 0424-822-9068</h2>
+		<h2><i class="fa fa-envelope-o"></i> rotarycumana@gmail.com </h2>
+		
+	</div>
+	</div>
+				<div class="col-md-6">
+				<div class="form-wall">
+					<form id="contact-form">
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="escriba su nombre...">
+					  </div>
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="escriba su correo electronico...">
+					  </div>
+					  <div class="form-group">
+					    <textarea style=" height: 200px;"  class="form-control" type="text" id="textarea" name="textarea" placeholder="escriba su mensaje..."></textarea>
+					  </div>
+					  
+					  
+					  <button  name="submit" value="Acceder" id = "acceder"class="boton-contacts " type="submit">
+					                    ENVIAR</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
 	<section class="contacts">
 		<div id="gmap"></div>
 	</section>
@@ -246,21 +293,26 @@
 	<!-- /////////////////// FOOTER /////////////////// -->
 	
 	<section id="footer">	
-		<div class="row">
-			<div class="col-md-12">
-				<div class="icon center-block">
-					<i class="fa fa-facebook"></i>
-					<i class="fa fa-twitter"></i>
-					<i class="fa fa-instagram"></i>
+				<div class="container">
+				<div class="iconos">
+
+					<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					
 				</div>
-				<hr>
+				<div class="text-center-foot">
+					<h2>© 2016 Rotary Cumana</h2>
+				</div>
 				<div class="text-footer">
-					<h2>Todos los derechos reservados. Rotary Cumaná</h2>
-					<?php include("php/enlace_admin.php"); ?>
-					<?php include_once('php/connection.php');?>
+					
+					<h2><?php include("php/enlace_admin.php"); ?></h2>
+					<h2><?php include_once('php/connection.php');?></h2>
 				</div>
-			</div>
-		</div>
+				</div>
 	</section>
+	<script>
+    $('.carousel').carousel({
+        interval: 50000 //changes the speed
+    })
+    </script>
 </body>
 </html>

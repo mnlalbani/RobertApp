@@ -4,7 +4,7 @@
                     <div class="col-lg-12">
                       <h3 class="page-header"><i class="fa fa-laptop"></i> INICIO</h3>
                         <ol class="breadcrumb">
-                          <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                          <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                           <li><i class="fa fa-laptop"></i>Bienvenida</li>						  	
                         </ol>
                     </div>
@@ -18,7 +18,7 @@
                   <div class="col-lg-12">
                     <h3 class="page-header"><i class="fa fa-file-text-o"></i> NOTICIAS RECIENTES</h3>
                       <ol class="breadcrumb">
-                        <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                        <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                         <li><i class="icon_document_alt"></i>Noticias</li>
                         <li><i class="fa fa-file-text-o"></i>Noticias recientes</li>
                       </ol>
@@ -28,7 +28,7 @@
                   <div class="col-lg-12">
                     <section class="panel">
                       <header class="panel-heading">
-                        Form Elements
+                        Formulario noticias recientes
                       </header>
                     <div class="panel-body">
                       <form class="form-horizontal " method="post" id="formulario_reciente" action="php/registro_reciente.php">
@@ -54,7 +54,6 @@
                           <label class="col-sm-2 control-label">Contenido:</label>
                           <div class="col-sm-10">
                             <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia">
-                              
                             </textarea>
                           </div>
                         </div>
@@ -81,7 +80,7 @@
                   <div class="col-lg-12">
                     <h3 class="page-header"><i class="fa fa-file-text-o"></i> NOTICIAS PROXIMAS</h3>
                       <ol class="breadcrumb">
-                        <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                        <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                         <li><i class="icon_document_alt"></i>Noticias</li>
                         <li><i class="fa fa-file-text-o"></i>Noticias Proximas</li>
                       </ol>
@@ -91,7 +90,7 @@
                   <div class="col-lg-12">
                     <section class="panel">
                       <header class="panel-heading">
-                        Form Elements
+                        Formulario noticias proximas
                       </header>
                     <div class="panel-body">
                       <form class="form-horizontal " method="post" id="formulario_proximo" action="php/registro_noticia.php">
@@ -204,7 +203,7 @@
               <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-file-text-o"></i> Noticias Recientes</h3>
                 <ol class="breadcrumb">
-                  <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                  <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                   <li><i class="icon_document_alt"></i>Ver o Editar Noticias</li>
                 </ol>
               </div>
@@ -215,15 +214,15 @@
                        <div class="col-md.12">
                           <section class="panel">
                             <header class="panel-heading">
-                                Todas las Noticias
+                                Todas las Noticias recientes
                             </header> 
                             <table class="table table-striped table-advance table-hover">
                              <tbody>
                                 <tr>
-                                   <th><i class="icon_profile"></i> Titulo</th>
-                                   <th><i class="icon_calendar"></i> Fecha</th>
-                                   <th><i class="icon_pin_alt"></i> Lugar</th>
-                                   <th><i class="icon_cogs"></i> Action</th>
+                                   <th><i class="icon_profile"></i> TITULO</th>
+                                   <th><i class="icon_calendar"></i> FECHA</th>
+                                   <th><i class="icon_pin_alt"></i> LUGAR</th>
+                                   <th><i class="icon_cogs"></i> ACCION</th>
                                 </tr>
                                 <?php include_once("listar_reciente.php"); ?>
                              </tbody>
@@ -240,7 +239,7 @@
               <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-file-text-o"></i> Próximas Noticias</h3>
                 <ol class="breadcrumb">
-                  <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                  <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                   <li><i class="icon_document_alt"></i>Ver o Editar Próximas Próximas</li>
                 </ol>
               </div>
@@ -251,7 +250,7 @@
                        <div class="col-md.12">
                           <section class="panel">
                             <header class="panel-heading">
-                                Todas las Noticias
+                                Todas las noticias proximas
                             </header> 
                             <table class="table table-striped table-advance table-hover">
                              <tbody>
@@ -276,7 +275,7 @@
               <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-file-text-o"></i> Usuarios</h3>
                 <ol class="breadcrumb">
-                  <li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
+                  <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
                   <li><i class="icon_document_alt"></i>Ver o Editar Usuarios</li>
                 </ol>
               </div>
@@ -292,12 +291,12 @@
                             <table class="table table-striped table-advance table-hover">
                              <tbody>
                                 <tr>
-                                   <th><i class="icon_profile"></i> Full Name</th>
-                                   <th><i class="icon_calendar"></i> Date</th>
-                                   <th><i class="icon_mail_alt"></i> Email</th>
-                                   <th><i class="icon_pin_alt"></i> City</th>
-                                   <th><i class="icon_mobile"></i> Mobile</th>
-                                   <th><i class="icon_cogs"></i> Action</th>
+                                   <th><i class="icon_profile"></i> NOMBRE</th>
+                                   <th><i class="icon_calendar"></i> FECHA</th>
+                                   <th><i class="icon_mail_alt"></i> CORREO</th>
+                                   <th><i class="icon_pin_alt"></i> CIUDAD</th>
+                                   <th><i class="icon_mobile"></i> TELEFONO</th>
+                                   <th><i class="icon_cogs"></i> ACCION</th>
                                 </tr>
                                 <?php include_once("listar_usuario.php"); ?>
                              </tbody>
@@ -314,7 +313,7 @@
                     <div class='col-lg-12'>
                       <h3 class='page-header'><i class='fa fa-file-text-o'></i> USUARIOS</h3>
                         <ol class='breadcrumb'>
-                          <li><i class='fa fa-home'></i><a href='index.php'>Inicio</a></li>
+                          <li><i class='fa fa-home'></i><a href='admin.php'>Inicio</a></li>
                           <li><i class='icon_document_alt'></i>Registrar Usuarios</li>
                         </ol>
                     </div>

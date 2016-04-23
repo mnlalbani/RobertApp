@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2016 at 10:12 PM
+-- Generation Time: Apr 19, 2016 at 04:11 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `proxima` (
   `contenido` varchar(250) NOT NULL,
   `imagen` varchar(2000) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `proxima`
@@ -61,9 +61,10 @@ INSERT INTO `proxima` (`codigo`, `titulo`, `fecha`, `lugar`, `contenido`, `image
 (18, 'asdasd', 'asdas', '', 'dasdas', ''),
 (19, 'sdklfgljk', 'ghljhgjhg', '', 'gkljgkljgh', ''),
 (20, 'gfgfgdf', 'gdfgdfg', '', 'dfgdfgdfg', ''),
-(21, 'd', 'd', '', 'd', ''),
 (22, 'd', 'd', '', 'd', ''),
-(23, 'prueba pruebaaskldgaklsjdglajksgkladghsjhg', '23489273595423895427', '', 'iyi2378046902783402736046230402', '');
+(24, 'Hola como estas kahjksdhljk', 'jklkljljkg', 'CuamanÃ¡', 'hglgljkg', ''),
+(25, 'jkfkuyuyf', 'uyuyr', 'Cumana', 'rsdfsdf', ''),
+(26, 'Prueba', 'Hoy', 'Cumana', 'Hola', '');
 
 -- --------------------------------------------------------
 
@@ -79,34 +80,17 @@ CREATE TABLE IF NOT EXISTS `reciente` (
   `contenido` varchar(500) NOT NULL,
   `imagen` varchar(2000) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `reciente`
 --
 
 INSERT INTO `reciente` (`codigo`, `titulo`, `fecha`, `lugar`, `contenido`, `imagen`) VALUES
-(20, 'Ã±hljkgh', 'kljhljkhlj', '', 'gkljgklj', ''),
-(21, 'ulfkf', 'kjhvjhfvk', '', 'kjhfgjhk\r\n', ''),
-(22, 'reciente', 'asgdklajsg', '', 'kgljkgjklkjhfgjhk\r\n', ''),
-(23, 'reciente', 'asgdklajsg', '', 'kgljkgjklkjhfgjhk\r\n', ''),
-(24, 'Presentacion de la o', '25 enero d', 'cumana', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi reprehenderit sapiente repellat fugit cum, dignissimos non culpa, hic sed ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi reprehenderit sapiente ', ''),
-(25, 'asdlgaskdg', 'ghkghkghk', '', 'jhgkjhgkgjk', ''),
-(26, 'sdfsdf', 'sdfsdfs', '', 'dfsdf', ''),
-(27, 'sdfsdf', 'sdf', '', 'sdf', ''),
-(28, 'tututututu', 'ututut', '', 'tututut                              \r\n                            ', ''),
-(29, 'asdasdas', 'dasdasd', '', '                              asdasd\r\n                            dasdasdasdasd', ''),
-(30, 'opopop', 'opopopo', '', 'opopop                              \r\n                            ', ''),
-(31, 'opopop', 'opopo', '', 'opop                              \r\n                            ', ''),
-(32, 'uiuiui', 'iuiuiuiui', '', 'iuiuiuiui                              \r\n                            ', ''),
-(33, 'Ã±jlhoih', 'hljkhljkh', '', 'khljkhkl                              \r\n                            ', ''),
-(34, 'asdasd', 'uu', '', '                              \r\n                           uuuuu', ''),
-(35, 'ooooo', 'oooooo', '', 'ooooo                              \r\n                            ', ''),
-(36, 'uytituyt', 'ityuityi', '', 'tiuytuytui                              \r\n                            ', ''),
-(37, 'ppp', 'pppp', '', 'ppp                              \r\n                            ', ''),
-(38, 'ujhuiogig', 'ogpgpghg', '', 'pjgÃ±jh`hoÃ±                              \r\n                            ', ''),
-(39, 'cxcxxcxccxx', 'cxcxcxcxc', '', 'cxcxcxcc                              \r\n                            ', ''),
-(40, 'rrtrttrt', 'rtrtrrtrtr', '', 'trtrtrrt                              \r\n                            ', '');
+(24, 'Prueba', 'hahah', 'CumanÃ¡', 'haha                              \r\n                            ', ''),
+(29, 'nueva en lista', 'lkhklhl', 'CumanÃ¡', 'hlkjhljk                              \r\n                            ', ''),
+(30, 'Noticia Actualizada', 'Hoy', 'CumanÃ¡', 'Hola', ''),
+(33, 'p+`''0Ã§', '''Ã§''Ã§', '''Ã§''Ã§', 'Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡                              \r\n''Â¡Ã§''Ã§''Ã§                            ', '');
 
 -- --------------------------------------------------------
 
@@ -116,22 +100,26 @@ INSERT INTO `reciente` (`codigo`, `titulo`, `fecha`, `lugar`, `contenido`, `imag
 
 CREATE TABLE IF NOT EXISTS `usuario` (
   `nombre` varchar(20) NOT NULL,
+  `usuario` varchar(10) NOT NULL,
+  `password` varchar(8) NOT NULL,
   `tipo` varchar(1) NOT NULL,
   `apellido` varchar(20) NOT NULL,
   `fechaRegistro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `correo` varchar(50) NOT NULL,
   `ciudad` varchar(20) NOT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` varchar(12) NOT NULL,
   `codigo` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`nombre`, `tipo`, `apellido`, `fechaRegistro`, `correo`, `ciudad`, `telefono`, `codigo`) VALUES
-('Robert', '', 'Rodriguez', '2016-04-03 19:53:00', 'robert@robert.com', 'Cuman&#225', 800123456, 1);
+INSERT INTO `usuario` (`nombre`, `usuario`, `password`, `tipo`, `apellido`, `fechaRegistro`, `correo`, `ciudad`, `telefono`, `codigo`) VALUES
+('Robert', 'robert', '1234', '1', 'Rodriguez', '2016-04-03 19:53:00', 'robert@robert.com', 'CumanÃ¡', '55555', 1),
+('Manuel', 'albani', '1234', '2', 'Albani', '2016-04-18 19:29:41', 'mnlalbani@gmail.com', 'CumnÃ¡', '02943324339', 2),
+('Noe2', 'noe2', '1234', '2', 'longart', '2016-04-18 19:37:54', 'correo@correo.com', 'aqui', '1234', 4);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

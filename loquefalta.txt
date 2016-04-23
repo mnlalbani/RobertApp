@@ -1,0 +1,6 @@
+1. Validacion del login. user y pass, input vacios
+2. Validacion de registro de usuario. que el usuario y o contraseña ya existan
+3. Validacion formulario de registro de usuario, se regisran input vacios
+4. Crear vista inicial del admin para la documentacion
+6. Quitar el json de los errores
+5. Subir imagenes

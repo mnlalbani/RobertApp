@@ -1,7 +1,8 @@
 @media screen and (min-width: 768px) and (max-width: 1280px){
 
 /*-------- CAROUSEL ---------- */
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .navbar-index {
   width: 100%;
   height: 120px;
@@ -26,22 +27,25 @@
 }
 
 .centro-medico h2{
-  color: #121212;
+  color: #000;
   font-weight: bolder;
   text-align: center;
-  font-size: 34px;
+  font-size: 40px;
   text-transform: uppercase;
   line-height: 1.8em;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .centro-medico p{
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 17px;
+  font-weight: normal;
   line-height: 1.9;
-  color: #121212;
+  color: #777;
   margin: 0px 80px 40px 90px;
   text-align: center;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif; 
+
 }  
 #logo {
   display: inline-block;
@@ -52,6 +56,11 @@
 
 #logo img{
   width: 40%;
+}
+.title{
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 header nav {
@@ -125,7 +134,11 @@ a:focus, a:hover {
   text-align: center;
   right: 0%;
   left: 0%;
-  padding-bottom: 100px; 
+  padding-bottom: 255px; 
+}  
+
+.carousel-caption img{
+  width: 50%; 
 }  
 
 .carousel-caption h2{
@@ -140,12 +153,38 @@ a:focus, a:hover {
   box-shadow: none;
 }
 
+.datos-cons{
+  width: 100%;
+  background-color: transparent;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.datos-cons h2{
+  display: inline-block;
+  font-size: 15px;
+  color: #919295;
+  text-align: left;
+  font-weight: normal;
+  margin: 0;
+}
+
+.datos-cons h2 i{
+  
+  font-size: 25px;
+  color: #919295;
+  font-weight: bolder;
+  margin-right: 8px;
+}
+
 .text-cons p {
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 17px;
+  font-weight: normal;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.3em;
-  color: #121212;
-  margin: 0px 25px 20px 25px;
+  color: #777;
+  margin: 0px 25px 0px 25px;
   text-align: left;
 }
 
@@ -164,14 +203,14 @@ a:focus, a:hover {
 .recientes{
   width: 70%;
   height: 750px;
-  background-color: red;
+  background-color: transparent;
   float: left;
 }
 
 .prox{
   width: 30%;
   height: 750px;
-  background-color: blue;
+  background-color: transparent;
   float: right;
 }
 
@@ -189,32 +228,39 @@ a:focus, a:hover {
   font-size: 15px;
   padding:  40px 40px 0px 40px;
   font-weight: normal;
+  color: #777;
   text-transform: uppercase;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
 }
 
 .elemento:nth-child(odd) .text1 h2{
   margin: 15px 0 0px 0;
   font-size: 20px;
-  color: #121212;
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
   padding:  0 0px 0 40px;
   font-weight: bold;
+  letter-spacing: 1px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 
 .elemento:nth-child(odd) .text1 p{
   margin: 0;
+  color: #777;
   font-size: 15px;
   padding:  10px 40px 0px 40px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.5em;
   text-align: left;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .elemento:nth-child(odd) .img1{
   width: 50%;
-  background-color: green;
+  background-color: #fff;
   float: right;
   background-size: cover;
   height: 300px;
@@ -225,34 +271,42 @@ a:focus, a:hover {
 .elemento:nth-child(even) .text1 h2{
   margin: 15px 0 0px 0;
   font-size: 20px;
-  color: #121212;
+  color: #000;
   text-transform: uppercase;
   padding:  0 0px 0 40px;
   font-weight: bold;
+  
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
 }
 
 .elemento:nth-child(even) .text1 p{
   margin: 0;
+  color: #777;
   font-size: 15px;
   padding:  10px 40px 0px 40px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.5em;
   text-align: left;
+font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 }
 
 .elemento:nth-child(even) .text1 h1{
   margin: 0;
+  color: #777;
   font-size: 15px;
   padding:  40px 50px 0px 40px;
   font-weight: normal;
-  font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .elemento:nth-child(even) .img1{
   width: 50%;
   height: 300px;
-  background-color: yellow;
+  background-color: transparent;
   float: left;
 }
 .elemento:nth-child(even) .img1 img{
@@ -297,35 +351,39 @@ a:focus, a:hover {
   margin: 0;
   font-size: 20px;
   color: #fff;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2em;
   font-weight: bolder;
   padding:  40px 35px 0 35px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .cont-prox-1 h2{
   margin: 0;
   font-size: 18px;
-  color: #121212;
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
   padding:  0 35px 0 25px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 .cont-prox-1 p{
   margin: 0;
   font-size: 13px;
   padding:  10px 35px 0px 25px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.5em;
   text-align: left;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .cont-prox-1 hr{
   width: 100%;
   height: 2px;
-  background-color: red;
+  background-color: transparent;
   margin:  0px 35px 0px 35px;
   
 }
@@ -336,6 +394,7 @@ a:focus, a:hover {
   padding:  30px 35px 10px 25px;
   font-weight: normal;
   text-transform: uppercase;
+  font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .cont-prox-2 h2{
@@ -359,7 +418,7 @@ a:focus, a:hover {
 .cont-prox-2 hr{
   width: 100%;
   height: 2px;
-  background-color: red;
+  background-color: transparent;
   margin:  0px 35px 0px 35px;
 }
 
@@ -392,7 +451,7 @@ a:focus, a:hover {
 .cont-prox-3 hr{
   width: 100%;
   height: 2px;
-  background-color: red;
+  background-color: transparent;
   margin:  0px 35px 0px 35px;  
 }
 
@@ -411,171 +470,139 @@ a:focus, a:hover {
 
 /*-------- FOOTER ---------- */
 
-#footer{
-  background-color: #1a2732;
-  padding: 40px 0 0px 0;
-}
-
-#footer hr{
-  background-color: #3d4b4f;
-  height: 1px;
-  width: 90%;
-  border-top:none;
-}
-
-.icon{
-  background-color: #1a2732;
-  width: 25%;
-  color: #1a2732;
-  padding-bottom: 10px;
-}
-
-.text-footer{
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.text-footer h2{
-  font-size: 15px;
-  text-align: center;
-  font-family: 'Oswald',sans-serif;
-  font-weight: 400;
-  color: #515e61;
-  padding: 15px 0 15px 0;
-}
-
-.icon i{
-  display: inline-block;
-  font-size: 50px;
-  margin: 0 19px 0 19px;
-  color: #515e61;
-}
-
-.icon i:hover{
-  color: #9FB4B9;
-  transition:.3s;
-  cursor: pointer;
-}
-
 .consul{
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   float: left;
   height: 250px;
 }
 
 .rehab{
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   float: left;
   height: 250px;
 }
 
 .prote{
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   float: right;
   height: 250px;
 }
 .text-consul h2{
-  color: #121212;
+  color: #000;
   font-weight: bold;
   text-align: left;
   font-size: 25px;
   text-transform: uppercase;
   line-height: 1.2em;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 20px 0 10px 0;
 }
 
 .text-consul p{
   font-size: 15px;
-  font-weight: 100;
-  line-height: 1.5;
-  color: #121212;
+  font-weight: normal;
+  line-height: 1.9;
+  color: #777;
   margin: 0 0px 15px 0px;
   text-align: left;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif; 
 }
 
-.boton-slider{
-  padding: 11px 30px;
-  border: 2px solid #f7a81b;
-  color: #fff;
-  text-align: center;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 10px 30px 0 0px;
-  background-color: #f7a81b;
-}
 
 .boton-news{
   padding: 9px 28px;
-  border: 2px solid #f7a81b;
+  border: 2px solid #F7A81B;
   color: #fff;
   font-size: 13px;
   font-weight: bold;
   margin: 15px 0 0 30px;
-  background-color: #f7a81b;
+  background-color: #F7A81B;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+
 }
+.boton-news:hover{
+  background-color: #FF7600;
+  color: #fff;
+  border: 2px solid #FF7600;
+  transition: .5s all ease;
+}
+
 .boton-prox{
   padding: 9px 28px;
-  border: 2px solid  #005DAA;
+  border: 2px solid  #17458F;
   color: #fff;
   font-size: 13px;
   font-weight: bold;
   margin: 15px 0 0 25px;
-  background-color:  #005DAA;
+  background-color:  #17458F;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
 }
-.info-box .title {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 30px 0 0 0;
-  float: right;
-}
-.info-box i {
-  display: block;
-  height: 100px;
-  font-size: 150px;
-  line-height: 100px;
-  width: 100px;
-  float: left;
-  text-align: center;
-  margin-right: 20px;
-  padding-right: 20px;
-  margin-top: 80px;
-  margin-bottom: 0px;
-  color: rgba(255, 255, 255, 0.75);
-}
-.boton-nosotros{
-  padding: 9px 28px;
-  border: 2px solid #f7a81b;
+.boton-prox:hover{
+  background-color: #005DAA;
   color: #fff;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 15px 0 0 35px;
-  background-color: #f7a81b;
-  margin-left: 0%;
+  border: 2px solid #005DAA;
+  transition: .5s all ease;
+  
 }
+
+
+
 .boton-contacts{
   padding: 11px 30px;
   border: 2px solid #17458F;
   color: #fff;
   font-size: 13px;
-  font-weight: normal;
-  margin: 20px 0 0 35px;
+  margin: 0px 0 0 0px;
+  float: left;
   background-color: #17458F;
-  margin-left: 0%;
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+}
+.boton-contacts:hover{
+  background-color: #005DAA;
+  color: #fff;
+  border: 2px solid #005DAA;
+  transition: .5s all ease;
+  
+}
+.boton-rotary{
+  padding: 11px 30px;
+  border: 2px solid #17458F;
+  color: #fff;
+  font-size: 13px;
+  margin: 30px 0 0 10px;
+  float: left;
+  background-color: #17458F;
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
 }
 
 .boton-consul{
   padding: 11px 30px;
-  border: 2px solid #005DAA;
+  border: 2px solid #17458F;
   color: #fff;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
   font-size: 13px;
   font-weight: normal;
   margin: 10px 0 0 25px;
+  background-color: #17458F;
+}
+
+.boton-consul:hover{
   background-color: #005DAA;
+  color: #fff;
+  border: 2px solid #005DAA;
+  transition: .5s all ease;
+  
 }
 .container-fluidnav {
     padding-right: 25px;
@@ -587,5 +614,178 @@ a:focus, a:hover {
     max-width: 390px;
     margin: 70px auto 0;
     background: #d5d7de;    
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px 2px 10px 2px;
+    color: #000;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #17458F;
+    font-weight: 400;
+    border-radius: 3px;
+    transition: .3s all ease;
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #17458F;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: .3s all ease;
+}
+.navbar-brand .logo-lg{
+  width: 30%;
+  margin-top: -6px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 0px;
+}
+.container-arre {
+    padding-right: 15px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#rotary{
+  width: 100%;
+  height: 450px;
+  background-color: transparent;
+  border-bottom: 1px solid #E7E7E8;
+}
+
+
+.slider-rot{
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  float: left;
+
+}
+
+
+
+.content-rot{
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  float: right;
+}
+.direccion-form h2 i{
+  color: #BCBDC0;
+  font-size: 35px;
+  
+}
+
+.direccion-form h2{
+  color: #919295;
+  text-transform: uppercase;
+  margin: 15px 0 15px 0;
+  font-size: 15px; 
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.direccion-form{
+  margin: 25px 0 0 0;
+  background-color: #fff;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.direccion-form i{
+  margin: 0 10px 0 0px;
+}
+.content-slider{
+  background-color: transparent;
+  padding: 50px;
+  background: url(../img/r5.jpg);
+  
+  background-size: cover;   
+  
+  transition-property: background-position;
+  width: 80%;
+  height: 310px;
+  margin:60px 25px 25px 45px;
+}
+
+.titulo-direccion h2{
+  color: #000;
+  text-transform: uppercase;
+  margin: 80px 0 70px 0;
+  font-size: 50px; 
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  
+}
+
+.titulo-direccion p{
+  color: #919295;
+
+  font-size: 16px; 
+  font-weight: normal;
+  font-family: Montserrat,"Helvetia Neue",Helvetica,Arial,sans-serif;
+  
+}
+.overlay-top h2{
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 2.0em;
+  margin: 170px 0 0 0;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+}
+.timeline > li > .timeline-badge {
+  width: 10px;
+  height: 10px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 52.1%;
+  margin-left: -25px;
+  background-color: #005DAA;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.text-rotary h2{
+  color: #000;
+  text-transform: uppercase;
+  margin: 65px 10px 0px 10px;
+  font-size: 40px; 
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+
+.text-rotary p{
+  color: #777;
+  margin: 30px 30px 0px 10px;
+  font-size: 17px; 
+  font-weight: normal;
+  line-height: 1.9;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif; 
 }
 }

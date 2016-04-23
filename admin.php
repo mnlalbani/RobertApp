@@ -18,6 +18,8 @@
     <!-- full calendar css-->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/768px.css">
+  <link rel="stylesheet" href="css/1200px.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -59,7 +61,7 @@
                       <li class="dropdown">
                             <?php include("php/session_admin.php"); ?>
                               <li>
-                                  <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                 
                               </li>
                           </ul>
                       </li>
@@ -109,7 +111,7 @@
         <!--sidebar end-->
         <!--main content start-->
         <section id="main-content">
-
+          
         </section>
         <!--main content end-->
     </section>

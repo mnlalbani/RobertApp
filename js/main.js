@@ -66,7 +66,7 @@ $(document).ajaxComplete(function(){
         e.preventDefault();
         var details = $('#formulario_modificar').serialize();
         $.post('php/modificar_noticia.php',details,function(data){
-        	console.log(details);
+        	
           	$('#response').html(data);
         });
 	});
@@ -85,7 +85,7 @@ $(document).ajaxComplete(function(){
         e.preventDefault();
         var details = $('#formulario_modificar_u').serialize();
         $.post('php/modificar_usuario.php',details,function(data){
-        	console.log(details);
+        	
           	$('#response').html(data);
         });
 	});

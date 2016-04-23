@@ -10,7 +10,7 @@
 		echo	"<h1>". $row['fecha'] ."</h1>";
 		echo	"<h2>". $row['titulo'] ."</h2>";
 		echo	"<p>".  substr($row['contenido'], 0 , 99) ."</p>";
-		echo	"<button type='button' class='boton-prox'>VER MAS</button> ";
+		echo	"<button type='button' class='boton-prox' value='".$row['codigo']."'>VER MAS</button> ";
 		echo	"</div>";
 		};
 	

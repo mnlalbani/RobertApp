@@ -23,6 +23,7 @@
 
     <link href="css/768px.css" rel="stylesheet">
     <link href="css/1200px.css" rel="stylesheet">
+    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
@@ -40,14 +41,13 @@
             <p class="login-img">rotary cumana<i class="icon_lock_alt"></i></p>
             <div class="input-group">
               <span class="input-group-addon"><i class="icon_profile"></i></span>
-              <input type="text" class="form-control" placeholder="Username" name="usuario" autofocus>
+              <input type="text" class="form-control" placeholder="ingrese su usuario..." name="usuario" autofocus>
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="ingrese su contraseña..." name="password">
             </div>
             <button class="boton-login btn-block" type="submit">ENTRAR</button>
-            <button class="boton-regis  btn-block" type="submit">REGISTRARSE</button>
         </div>
       </form>
 

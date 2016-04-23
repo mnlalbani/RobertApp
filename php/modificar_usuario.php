@@ -103,8 +103,8 @@
 				die("Error: {$mysqli->errno} : {$mysqli->error}");
 			};
 			$mysqli->close();
-			echo "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Usuario Modificado</p>
-			 <a class='' href='' id='lista_mod_usuario'> Volver a la lista de Usuarios </a>";
+			echo "<p style='margin:10px 0 10px 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #4cd964;' class='alert alert-success'> <i class='fa fa-check'></i> Usuario Modificado</p>
+			 <a class='volver' href='' id='lista_mod_usuario' ><i class='fa fa-long-arrow-left' style='margin-right:10px;'></i>Volver a la lista de Usuarios </a>";
 		}
 
 	}
