@@ -77,7 +77,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">                
                   <li class="active">
-                        <a class="" href="admin.php">
+                        <a class="" href="" id="inicio">
                             <i class="icon_house_alt"></i>
                             <span>INICIO</span>
                         </a>
@@ -111,7 +111,19 @@
         <!--sidebar end-->
         <!--main content start-->
         <section id="main-content">
-          
+              <section class="wrapper" id="vista_inicial">            
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3 class="page-header"><i class="fa fa-laptop"></i> INICIO</h3>
+                        <ol class="breadcrumb">
+                          <li><i class="fa fa-home"></i><a href="admin.php">Inicio</a></li>
+                          <li><i class="fa fa-laptop"></i>Bienvenida</li>               
+                        </ol>
+                    </div>
+                  </div>
+                  <div class="widget-foot">
+                  </div>
+              </section> 
         </section>
         <!--main content end-->
     </section>

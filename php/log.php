@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	include_once("connection.php");
-  	var_dump($_POST);
+  	//var_dump($_POST);
     $sql = "SELECT * from `usuario` where `usuario`= '$_POST[usuario]' AND `password` = '$_POST[password]'";
     $result = $mysqli->query($sql);
     //echo $sql;
@@ -17,6 +17,6 @@
       exit();
     }
     else{
-      header("location: ../login.php");
+      echo "Usuario o contraseña invalido";
     }
  ?>

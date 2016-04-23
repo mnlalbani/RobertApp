@@ -1,12 +1,36 @@
 $(document).ready(function(){
 	$('.prox').load('php/consulta_proxima.php');
 	$('.recientes').load('php/consulta_reciente.php');
+
+	$('.login-form').on('submit',function(e){
+		e.preventDefault();
+		var details = $(this).serialize();
+		$.post('php/log.php',details,function(data){
+			/*var arr = JSON.parse(data);
+			console.log(arr);*/
+			$('#respuesta').html(data);
+		});
+	});
+
+	$('#contact-form').on('submit',function(e){
+		e.preventDefault();
+		var details = $(this).serialize();
+		$.post('php/correo.php',details,function(){
+			$('#contact-form').trigger("reset");
+			$('.responde').html("su mensaje ha sido enviado");
+		});
+	});
+
 });
 
 $(document).ajaxComplete(function(){
 	$('.boton-news').click(function(){
 		var codigo = $(this).attr('value');
-		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo;
+		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=reciente';
+	});
+	$('.boton-prox').click(function(){
+		var codigo = $(this).attr('value');
+		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=proxima';
 	});
 	$('#formulario_proximo').on('submit',function(e){
 		e.preventDefault();
@@ -17,13 +41,31 @@ $(document).ajaxComplete(function(){
 		});
 	});
 	$('#formulario_reciente').unbind('submit'); 
-	$('#formulario_reciente').on('submit',function(e){
-        e.preventDefault();
-        var details = $('#formulario_reciente').serialize();
-        $.post('php/registro_reciente.php',details,function(data){
+	$('#formulario_reciente#data').on('submit',function(e){
+		e.preventDefault();
+        //var details = $('#formulario_reciente').serialize();
+        var formData = new FormData($(this)[0]);
+        /*$.post($(this).attr('action'),formData,function(data){
         	$("form").trigger("reset");
           	$('#response').html(data);
         });
+        return false;*/
+
+        $.ajax({
+			    url: 'php/registro_reciente.php',
+			    type: 'post',
+			    data: formData ,
+			    contentType: false,
+			    processData: false,
+			    success: function (data, status) {
+			        $("form").trigger("reset");
+          			$('#response').html(data);
+			    },
+			    error: function (xhr, desc, err) {
+			        // ...
+			    }
+		});
+        
 	});
 
 
@@ -89,13 +131,32 @@ $(document).ajaxComplete(function(){
           	$('#response').html(data);
         });
 	});
+
+	//Subir Usuario
 	$('#formulario_subir_usuarios').unbind('submit');
 	$('#formulario_subir_usuarios').on('submit',function(e){
 		e.preventDefault();
 		var details = $('#formulario_subir_usuarios').serialize();
 		$.post('php/subir_usuario.php',details,function(data){
 			$("form").trigger("reset");
-			$('#response').html(data);
+			var arr = JSON.parse(data);
+			console.log(typeof(arr.errors.contenido));
+			console.log(arr.errors.contenido);
+    		var i;
+    		/*var out = "<table>";
+
+    		for(i = 0; i < arr.length; i++) {
+		        out += "<tr><td>" + 
+		        arr[i].nombre +
+		        "</td><td>" +
+		        arr[i].City +
+		        "</td><td>" +
+		        arr[i].Country +
+		        "</td></tr>";
+    		}
+    		out += "</table>";*/
+    		//document.getElementById("id01").innerHTML = out;
+			$('#response').html(arr.errors.usuario);
 		});
 	});
 });

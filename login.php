@@ -47,10 +47,11 @@
                 <span class="input-group-addon"><i class="icon_key_alt"></i></span>
                 <input type="password" class="form-control" placeholder="ingrese su contraseña..." name="password">
             </div>
-            <button class="boton-login btn-block" type="submit">ENTRAR</button>
+            <button class="boton-login btn-block" name="submit" type="submit">ENTRAR</button>
+            
         </div>
       </form>
-
+        <div id="respuesta"></div>
     </div>
 
 

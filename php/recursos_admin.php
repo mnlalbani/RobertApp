@@ -31,11 +31,11 @@
                         Formulario noticias recientes
                       </header>
                     <div class="panel-body">
-                      <form class="form-horizontal " method="post" id="formulario_reciente" action="php/registro_reciente.php">
+                      <form class="form-horizontal " method="post" id="formulario_reciente" action="php/registro_reciente.php" enctype="multipart/form-data">
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Titulo:</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" placeholder="Titulo de la noticia.." id="titulo" name="titulo">
+                          <input type="text" class="form-control" placeholder="Titulo de la noticia.." id="titulo" name="titulo" required>
                         </div>
                         </div>
                         <div class="form-group">
@@ -53,17 +53,14 @@
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Contenido:</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia">
-                            </textarea>
+                            <textarea class="form-control" id="contenido" name="contenido" placeholder="Ingrese el contenido de la noticia"></textarea>
                           </div>
                         </div>
-                    <!--
                         <div class="form-group">
                           <label class="col-sm-2 control-label" for="exampleInputFile">Imagenes:</label>
-                          <input type="file" id="exampleInputFile">
-                          <p class="col-sm-2 control-label">Ejemplo: imagen.jpg</p>
+                          <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
+                          <p class="col-sm-2 control-label">Ejemplo: imagen.jpg Maximo 10 imagenes</p>
                         </div>
-                     -->
                         <button  name="submit" class="boton-login btn-block" type="submit">
                           PUBLICAR NOTICIA
                         </button>
@@ -93,7 +90,7 @@
                         Formulario noticias proximas
                       </header>
                     <div class="panel-body">
-                      <form class="form-horizontal " method="post" id="formulario_proximo" action="php/registro_noticia.php">
+                      <form class="form-horizontal " method="post" id="formulario_proximo" action="php/registro_noticia.php" enctype="multipart/form-data">
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Titulo:</label>
                         <div class="col-sm-10">
@@ -325,7 +322,7 @@
                           Registrar Usuarios
                         </header>
                       <div class='panel-body'>
-                        <form class='form-horizontal' id="formulario_subir_usuarios" method='post'  action='' codigo=''>
+                        <form class='form-horizontal' id="formulario_subir_usuarios" method='post'  action='' codigo='' autocomplete="off">
                           <div class='form-group'>
                             <label class='col-sm-2 control-label'>Nombre:</label>
                           <div class='col-sm-10'>

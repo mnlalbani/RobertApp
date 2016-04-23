@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	$('#inicio').click(function(){
+		$('#main-content').load('php/recursos_admin.php #vista_inicial');
+		return false;
+	});
 	$('#reciente').click(function(){
 		$('#main-content').load('php/recursos_admin.php #vista_portada_noticias');
 		return false;

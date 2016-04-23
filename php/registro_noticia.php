@@ -27,6 +27,7 @@
 		$sql = "INSERT INTO proxima (titulo, fecha,contenido)
 			VALUES ('{$mysqli->real_escape_string($_POST['titulo'])}',
 			'{$mysqli->real_escape_string($_POST['fecha'])}',
+			'{$mysqli->real_escape_string($_POST['lugar'])}',
 			'{$mysqli->real_escape_string($_POST['contenido'])}')";
 		$insert = $mysqli->query($sql);
 		if (! $insert) {

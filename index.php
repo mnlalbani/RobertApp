@@ -265,21 +265,23 @@
 	</div>
 				<div class="col-md-6">
 				<div class="form-wall">
-					<form id="contact-form">
+					<form id="contact-form" method="POST">
 					  <div class="form-group">
-					    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="escriba su nombre...">
+					    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="escriba su nombre..." name="nombre">
 					  </div>
 					  <div class="form-group">
-					    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="escriba su correo electronico...">
+					    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="escriba su correo electronico..." name="correo">
 					  </div>
 					  <div class="form-group">
-					    <textarea style=" height: 200px;"  class="form-control" type="text" id="textarea" name="textarea" placeholder="escriba su mensaje..."></textarea>
+					    <textarea style=" height: 200px;"  class="form-control" type="text" id="mensaje" name="mensaje" placeholder="escriba su mensaje..." name="mensaje"></textarea>
 					  </div>
 					  
 					  
 					  <button  name="submit" value="Acceder" id = "acceder"class="boton-contacts " type="submit">
 					                    ENVIAR</button>
+					
 					</form>
+					<div class="responde"></div>
 					</div>
 				</div>
 			</div>
