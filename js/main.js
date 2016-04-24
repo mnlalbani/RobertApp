@@ -11,7 +11,7 @@ $(document).ready(function(){
 			$('#respuesta').html(data);
 		});
 	});
-
+//g
 	$('#contact-form').on('submit',function(e){
 		e.preventDefault();
 		var details = $(this).serialize();
@@ -140,22 +140,7 @@ $(document).ajaxComplete(function(){
 		$.post('php/subir_usuario.php',details,function(data){
 			$("form").trigger("reset");
 			var arr = JSON.parse(data);
-			console.log(typeof(arr.errors.contenido));
-			console.log(arr.errors.contenido);
-    		var i;
-    		/*var out = "<table>";
-
-    		for(i = 0; i < arr.length; i++) {
-		        out += "<tr><td>" + 
-		        arr[i].nombre +
-		        "</td><td>" +
-		        arr[i].City +
-		        "</td><td>" +
-		        arr[i].Country +
-		        "</td></tr>";
-    		}
-    		out += "</table>";*/
-    		//document.getElementById("id01").innerHTML = out;
+			console.log(arr.length);
 			$('#response').html(arr.errors.usuario);
 		});
 	});

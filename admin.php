@@ -61,7 +61,6 @@
                       <li class="dropdown">
                             <?php include("php/session_admin.php"); ?>
                               <li>
-                                 
                               </li>
                           </ul>
                       </li>
