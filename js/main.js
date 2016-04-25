@@ -2,16 +2,22 @@ $(document).ready(function(){
 	$('.prox').load('php/consulta_proxima.php');
 	$('.recientes').load('php/consulta_reciente.php');
 
-	$('.login-form').on('submit',function(e){
+	$('#login-form').unbind('submit');
+	$('#login-form').on('submit',function(e){
 		e.preventDefault();
-		var details = $(this).serialize();
+		var details = $('#login-form').serialize();
 		$.post('php/log.php',details,function(data){
-			/*var arr = JSON.parse(data);
-			console.log(arr);*/
-			$('#respuesta').html(data);
+			var arr = JSON.parse(data);
+			console.log(arr);
+			if(arr.success == true) {
+				location.href = 'http://localhost/rotary/admin.php';
+			}
+			else{
+			$('#response').html(arr.errors.invalido);
+			}
 		});
 	});
-//g
+	$('#contact-form').unbind('submit');
 	$('#contact-form').on('submit',function(e){
 		e.preventDefault();
 		var details = $(this).serialize();
@@ -32,6 +38,7 @@ $(document).ajaxComplete(function(){
 		var codigo = $(this).attr('value');
 		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=proxima';
 	});
+	$('#formulario_proximo').unbind('submit');
 	$('#formulario_proximo').on('submit',function(e){
 		e.preventDefault();
 		var details = $('#formulario_proximo').serialize();
@@ -108,7 +115,6 @@ $(document).ajaxComplete(function(){
         e.preventDefault();
         var details = $('#formulario_modificar').serialize();
         $.post('php/modificar_noticia.php',details,function(data){
-        	
           	$('#response').html(data);
         });
 	});

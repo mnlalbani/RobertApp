@@ -7,7 +7,6 @@
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
-
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
@@ -17,26 +16,19 @@
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />    
     <!-- full calendar css-->
-    
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
-
     <link href="css/768px.css" rel="stylesheet">
     <link href="css/1200px.css" rel="stylesheet">
-    
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
-
   <body class="login-body">
-
     <div class="container">
-
-      <form class="login-form" method="POST" action="php/log.php">        
+      <form class="login-form" id="login-form" method="POST" action="php/log.php">        
         <div class="login-wrap">
             <p class="login-img">rotary cumana<i class="icon_lock_alt"></i></p>
             <div class="input-group">
@@ -48,12 +40,11 @@
                 <input type="password" class="form-control" placeholder="ingrese su contraseña..." name="password">
             </div>
             <button class="boton-login btn-block" name="submit" type="submit">ENTRAR</button>
-            
         </div>
       </form>
-        <div id="respuesta"></div>
+        <div id="response"></div>
     </div>
-
-
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
