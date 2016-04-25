@@ -17,6 +17,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+
 	$('#contact-form').unbind('submit');
 	$('#contact-form').on('submit',function(e){
 		e.preventDefault();
@@ -146,8 +147,12 @@ $(document).ajaxComplete(function(){
 		$.post('php/subir_usuario.php',details,function(data){
 			$("form").trigger("reset");
 			var arr = JSON.parse(data);
-			console.log(arr.length);
-			$('#response').html(arr.errors.usuario);
+			if (arr.success == true) {
+				$('#response').html(arr.message);
+			}
+			else{
+				$('#response').html(arr.errors.usuario);
+			}
 		});
 	});
 });
