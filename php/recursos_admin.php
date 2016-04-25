@@ -31,7 +31,7 @@
                         Formulario noticias recientes
                       </header>
                     <div class="panel-body">
-                      <form class="form-horizontal " method="post" id="formulario_reciente" action="php/registro_reciente.php" enctype="multipart/form-data">
+                      <form class="form-horizontal " method="post" id="formulario_reciente"  enctype="multipart/form-data">
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Titulo:</label>
                         <div class="col-sm-10">

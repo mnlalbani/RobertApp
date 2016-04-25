@@ -39,6 +39,7 @@ $(document).ajaxComplete(function(){
 		var codigo = $(this).attr('value');
 		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=proxima';
 	});
+	//Noticia Proxima
 	$('#formulario_proximo').unbind('submit');
 	$('#formulario_proximo').on('submit',function(e){
 		e.preventDefault();
@@ -48,37 +49,33 @@ $(document).ajaxComplete(function(){
 			$('#response').html(data);
 		});
 	});
-	$('#formulario_reciente').unbind('submit'); 
-	$('#formulario_reciente#data').on('submit',function(e){
-		e.preventDefault();
-        //var details = $('#formulario_reciente').serialize();
-        var formData = new FormData($(this)[0]);
-        /*$.post($(this).attr('action'),formData,function(data){
-        	$("form").trigger("reset");
-          	$('#response').html(data);
-        });
-        return false;*/
+	//Noticia Reciente
 
-        $.ajax({
-			    url: 'php/registro_reciente.php',
-			    type: 'post',
-			    data: formData ,
-			    contentType: false,
-			    processData: false,
-			    success: function (data, status) {
-			        $("form").trigger("reset");
-          			$('#response').html(data);
-			    },
-			    error: function (xhr, desc, err) {
-			        // ...
-			    }
-		});
-        
+	$('#formulario_reciente').unbind('submit'); 
+	$("#formulario_reciente").on('submit',function(){
+	    var formData = $('#formulario_reciente').serializeFiles();
+	    console.log(formData);
+
+	    $.ajax({
+	        url: 'php/registro_reciente.php',
+	        type: 'POST',
+	        data: formData,
+	        async: true,
+	        success: function (data) {
+	            $('form').trigger('reset');
+	            console.log("success");
+	        },
+	        error: function(data){
+	        	console.log("error");
+	        },
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    });
+
+    return false;
 	});
 
-
-
-	
 //----------Eliminar----------//
 	$('.eliminar').unbind('click'); 
 	$('.eliminar').click(function(e){

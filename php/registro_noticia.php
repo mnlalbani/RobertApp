@@ -17,14 +17,14 @@
 	if (! empty($errors)) {
 		
 		$data['success'] = false;
-		$data['errors'] = $errors;
+		$data['error'] = $errors;
 
 		echo json_encode($data);
 	} else{
 		$data['success'] = true;
 		$data['message'] = 'success!';
 
-		$sql = "INSERT INTO proxima (titulo, fecha,contenido)
+		$sql = "INSERT INTO proxima (titulo, fecha,lugar,contenido)
 			VALUES ('{$mysqli->real_escape_string($_POST['titulo'])}',
 			'{$mysqli->real_escape_string($_POST['fecha'])}',
 			'{$mysqli->real_escape_string($_POST['lugar'])}',
