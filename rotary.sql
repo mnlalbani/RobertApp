@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2016 at 04:11 PM
+-- Generation Time: Apr 25, 2016 at 02:15 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -78,19 +78,35 @@ CREATE TABLE IF NOT EXISTS `reciente` (
   `fecha` varchar(20) NOT NULL,
   `lugar` varchar(200) NOT NULL,
   `contenido` varchar(500) NOT NULL,
-  `imagen` varchar(2000) NOT NULL,
+  `imagen1` text NOT NULL,
+  `imagen2` text NOT NULL,
+  `imagen3` text NOT NULL,
+  `imagen4` text NOT NULL,
+  `imagen5` text NOT NULL,
+  `imagen6` text NOT NULL,
+  `imagen7` text NOT NULL,
+  `imagen8` text NOT NULL,
+  `imagen9` text NOT NULL,
+  `imagen10` text NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `reciente`
 --
 
-INSERT INTO `reciente` (`codigo`, `titulo`, `fecha`, `lugar`, `contenido`, `imagen`) VALUES
-(24, 'Prueba', 'hahah', 'CumanÃ¡', 'haha                              \r\n                            ', ''),
-(29, 'nueva en lista', 'lkhklhl', 'CumanÃ¡', 'hlkjhljk                              \r\n                            ', ''),
-(30, 'Noticia Actualizada', 'Hoy', 'CumanÃ¡', 'Hola', ''),
-(33, 'p+`''0Ã§', '''Ã§''Ã§', '''Ã§''Ã§', 'Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡                              \r\n''Â¡Ã§''Ã§''Ã§                            ', '');
+INSERT INTO `reciente` (`codigo`, `titulo`, `fecha`, `lugar`, `contenido`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `imagen5`, `imagen6`, `imagen7`, `imagen8`, `imagen9`, `imagen10`) VALUES
+(24, 'Prueba', 'hahah', 'CumanÃ¡', 'haha                              \r\n                            ', '', '', '', '', '', '', '', '', '', ''),
+(29, 'nueva en lista', 'lkhklhl', 'CumanÃ¡', 'hlkjhljk                              \r\n                            ', '', '', '', '', '', '', '', '', '', ''),
+(30, 'Noticia Actualizada', 'Hoy', 'CumanÃ¡', 'Hola', '', '', '', '', '', '', '', '', '', ''),
+(33, 'p+`''0Ã§', '''Ã§''Ã§', '''Ã§''Ã§', 'Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡Â¡                              \r\n''Â¡Ã§''Ã§''Ã§                            ', '', '', '', '', '', '', '', '', '', ''),
+(34, 'prueba imagen', 'jklgljkgjklg', 'hglhg', 'jhgkhgjhgjk', '', '', '', '', '', '', '', '', '', ''),
+(35, '.gjjkg', 'ljkgklgjklgkl', 'gjkgjklgj', 'jkglkgk', '', '', '', '', '', '', '', '', '', ''),
+(36, 'imagen3', 'uitioto', 'tioutouit', 'ioutiotuitio', '', '', '', '', '', '', '', '', '', ''),
+(37, 'imagen4', 'jgyityt', 'uyytitit', 'itutuiytui', '', '', '', '', '', '', '', '', '', ''),
+(38, 'wewewewe', 'wewewewew', 'ewewewe', 'ewewewewe', '', '', '', '', '', '', '', '', '', ''),
+(39, 'wsws', 'swsw', 'swsw', 'swswswsws', '', '', '', '', '', '', '', '', '', ''),
+(40, 'Noticia', 'Noicia', 'Aqui', 'klsjdlajksdl', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -110,16 +126,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `telefono` varchar(12) NOT NULL,
   `codigo` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`nombre`, `usuario`, `password`, `tipo`, `apellido`, `fechaRegistro`, `correo`, `ciudad`, `telefono`, `codigo`) VALUES
-('Robert', 'robert', '1234', '1', 'Rodriguez', '2016-04-03 19:53:00', 'robert@robert.com', 'CumanÃ¡', '55555', 1),
-('Manuel', 'albani', '1234', '2', 'Albani', '2016-04-18 19:29:41', 'mnlalbani@gmail.com', 'CumnÃ¡', '02943324339', 2),
-('Noe2', 'noe2', '1234', '2', 'longart', '2016-04-18 19:37:54', 'correo@correo.com', 'aqui', '1234', 4);
+('Robert', 'robert', '1234', '1', 'Rodriguez', '2016-04-03 19:53:00', 'robert@robert.com', 'CumanÃ¡', '55555', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
