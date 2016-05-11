@@ -68,9 +68,24 @@
 		    echo "</div>";
 		    echo "</div>";
 		    echo "</div>";
-		    echo "<img src=".$row['imagen1'].">";
 			echo "</div>";
-
+			echo "<section id='photos'>";
+			echo "<ul class='row caption-style-1'>";
+        	echo "<li class='col-lg-3 col-md-3 col-sm-6 col-xs-6 padding-act'>";
+          	echo "<img class='img-responsive' src=". $row['imagen1']. ">";
+            echo "<div class='caption'>";
+            echo "<div class='blur'><h2>+</h2></div>";
+            echo "<div class='caption-text'>";
+            echo "</div>";
+            echo "</li>";
+            echo "<li class='col-lg-3 col-md-3 col-sm-6 col-xs-6 padding-act'>";
+          	echo "<img class='img-responsive' src=". $row['imagen2']. ">";
+            echo "<div class='caption'>";
+            echo "<div class='blur'><h2>+</h2></div>";
+            echo "<div class='caption-text'>";
+            echo "</div>";
+            echo "</li>";
+            echo "</ul>";
 			};
 		
 		$mysqli->close();
