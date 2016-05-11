@@ -15,7 +15,7 @@
 		echo	"<button name='codigo' type='button' class='boton-news' value='".$row['codigo']."'>VER MAS</button>";
 		echo	"</div>";
 		echo "<div class='img1'>";
-		echo "<img src=''>";
+		echo "<img src='".$row['imagen1']."'>";
 		echo "</div>";
 		echo "</div>";
 		};
