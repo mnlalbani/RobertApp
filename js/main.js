@@ -56,7 +56,8 @@ $(document).ajaxComplete(function(){
 		$('#formulario_reciente').ajaxForm({
 			dataType:  'json', 
 			success:function(data){
-				console.log(data);
+				//console.log(data);
+				$("form").trigger("reset");
 				$('#response').html(data.message);
 			},
 			error:function(data){
