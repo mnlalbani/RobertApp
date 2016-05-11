@@ -31,7 +31,6 @@
 	    echo "<div class='row'>";
 	    echo "<div class='col-md-12'>";
 	    echo "<div class='text-actp'> ";
-	    echo " <p>". $row['contenido']."</p>";
 	    echo "</div>";
 	    echo "</div>";
 	    echo "</div>";
@@ -69,6 +68,7 @@
 		    echo "</div>";
 		    echo "</div>";
 		    echo "</div>";
+		    echo "<img src=".$row['imagen1'].">";
 			echo "</div>";
 
 			};

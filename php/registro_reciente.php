@@ -1,10 +1,8 @@
 <?php 
 	include_once("connection.php");
+	error_reporting(0);
 	$errors = array();
 	$data = array();
-			var_dump($_FILES);
-		var_dump($_POST);
-		var_dump($_GET);
 	if (empty($_POST['titulo'])) {
 		$errors['titulo'] = "<p style='margin:10px 0 0 0; text-transform:uppercase; font-size:20px; font-weight:bold; border:2px solid #ff2d55;' class='alert alert-danger'> <i class='fa fa-times'> INGRESE EL TITULO DE LA NOTICIA</p>";
 	}
@@ -23,46 +21,47 @@
 		$data['errors'] = $errors;
 		echo json_encode($data);
 	} else{
-
-		var_dump($_FILES);
-		var_dump($_POST);
-		var_dump($_GET);
-
-		$valid_formats = array("jpg", "png", "gif", "zip", "bmp");
-		$max_file_size = 2000*2000; //100 kb
-		$path = 'C:\wamp\www\rotary\img\\'; // Upload directory
-		$count = 0;
-
-		if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
-			// Loop $_FILES to exeicute all files
-			foreach ($_FILES['files']['name'] as $f => $name) {     
-			    if ($_FILES['files']['error'][$f] == 4) {
-			        continue; // Skip file if any error found
-			    }	       
-			    if ($_FILES['files']['error'][$f] == 0) {	           
-			        if ($_FILES['files']['size'][$f] > $max_file_size) {
-			            $message[] = "$name is too large!.";
-			            continue; // Skip large files
-			        }
-					elseif( ! in_array(pathinfo($name, PATHINFO_EXTENSION), $valid_formats) ){
-						$message[] = "$name is not a valid format";
-						continue; // Skip invalid file formats
+		if($_POST['form_submit'] == 1)
+		{
+			$images_arr = array();
+			$error="";
+			foreach($_FILES['images']['name'] as $key=>$val){
+				$image_name = $_FILES['images']['name'][$key];
+				$tmp_name 	= $_FILES['images']['tmp_name'][$key];
+				$size 		= $_FILES['images']['size'][$key];
+				$type 		= $_FILES['images']['type'][$key];
+				$error 		= $_FILES['images']['error'][$key];
+				//checking image type
+				$allowed =  array('gif','png','jpg','jpeg','JPEG');
+				$filename = $_FILES['images']['name'][$key];
+				$ext = pathinfo($filename, PATHINFO_EXTENSION);
+				if(in_array($ext,$allowed)){
+				//move uploaded file to uploads folder
+				$target_dir = "../images/noticias_recientes/";
+				$target_file = $target_dir.$_FILES['images']['name'][$key];
+					if(move_uploaded_file($_FILES['images']['tmp_name'][$key],$target_file)){
+						$images_arr[] = $target_file;
 					}
-			        else{ // No error found! Move uploaded files 
-			            if(move_uploaded_file($_FILES["files"]["tmp_name"][$f], $path.$name)){
-			            	//$imagen[$count];
-			            	//var_dump($imagen);
-			            	$count++; // Number of successfully uploaded file	
-			            }
-			        }
-			    }
+				}
+				$error="Image type not valid";
 			}
 		}
-		$sql = "INSERT INTO reciente (titulo, fecha,lugar,contenido)
+
+		$sql = "INSERT INTO reciente (titulo,fecha,lugar,contenido,imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8,imagen9,imagen10)
 			VALUES ('{$mysqli->real_escape_string($_POST['titulo'])}',
 			'{$mysqli->real_escape_string($_POST['fecha'])}',
 			'{$mysqli->real_escape_string($_POST['lugar'])}',
-			'{$mysqli->real_escape_string($_POST['contenido'])}')";
+			'{$mysqli->real_escape_string($_POST['contenido'])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][0])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][1])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][2])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][3])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][4])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][5])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][6])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][7])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][8])}',
+			'{$mysqli->real_escape_string("images/noticias_recientes/".$_FILES['images']['name'][9])}')";
 		$insert = $mysqli->query($sql);
 		if (! $insert) {
 			die("Error: {$mysqli->errno} : {$mysqli->error}");

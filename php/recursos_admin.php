@@ -31,7 +31,7 @@
                         Formulario noticias recientes
                       </header>
                     <div class="panel-body">
-                      <form class="form-horizontal " method="post" id="formulario_reciente"  enctype="multipart/form-data">
+                      <form class="form-horizontal " method="post" id="formulario_reciente"  enctype="multipart/form-data" action="php/registro_reciente.php">
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Titulo:</label>
                         <div class="col-sm-10">
@@ -58,12 +58,13 @@
                         </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label" for="exampleInputFile">Imagenes:</label>
-                          <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
+                          <input type="hidden" name="form_submit" value="1"/>
+                          <input type="file" name="images[]" id="upload-images" multiple >
                           <p class="col-sm-2 control-label">Ejemplo: imagen.jpg Maximo 10 imagenes</p>
                         </div>
-                        <button  name="submit" class="boton-login btn-block" type="submit">
+                        <div id="publicar_noticia" name="submit" class="boton-login btn-block" >
                           PUBLICAR NOTICIA
-                        </button>
+                        </div>
                       </form>
                       <div id="response"></div>
                     </div>

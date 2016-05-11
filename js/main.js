@@ -51,29 +51,18 @@ $(document).ajaxComplete(function(){
 	});
 	//Noticia Reciente
 
-	$('#formulario_reciente').unbind('submit'); 
-	$("#formulario_reciente").on('submit',function(){
-	    var formData = $('#formulario_reciente').serializeFiles();
-	    console.log(formData);
-
-	    $.ajax({
-	        url: 'php/registro_reciente.php',
-	        type: 'POST',
-	        data: formData,
-	        async: true,
-	        success: function (data) {
-	            $('form').trigger('reset');
-	            console.log("success");
-	        },
-	        error: function(data){
-	        	console.log("error");
-	        },
-	        cache: false,
-	        contentType: false,
-	        processData: false
-	    });
-
-    return false;
+	$('#formulario_reciente #publicar_noticia').unbind('click'); 
+	$('#formulario_reciente #publicar_noticia').on('click',function(){
+		$('#formulario_reciente').ajaxForm({
+			dataType:  'json', 
+			success:function(data){
+				console.log(data);
+				$('#response').html(data.message);
+			},
+			error:function(data){
+				$('#response').html(data.error);
+			}
+		}).submit();
 	});
 
 //----------Eliminar----------//
