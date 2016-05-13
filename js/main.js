@@ -10,7 +10,7 @@ $(document).ready(function(){
 			var arr = JSON.parse(data);
 			console.log(arr);
 			if(arr.success == true) {
-				location.href = 'http://localhost/rotary/admin.php';
+				location.href = '/rotary/admin.php';
 			}
 			else{
 			$('#response').html(arr.errors.invalido);
@@ -33,11 +33,11 @@ $(document).ready(function(){
 $(document).ajaxComplete(function(){
 	$('.boton-news').click(function(){
 		var codigo = $(this).attr('value');
-		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=reciente';
+		location.href = '/rotary/actividades.php?codigo='+codigo+'&tipo=reciente';
 	});
 	$('.boton-prox').click(function(){
 		var codigo = $(this).attr('value');
-		location.href = 'http://localhost/rotary/actividades.php?codigo='+codigo+'&tipo=proxima';
+		location.href = '/rotary/actividades.php?codigo='+codigo+'&tipo=proxima';
 	});
 	//Noticia Proxima
 	$('#formulario_proximo').unbind('submit');
